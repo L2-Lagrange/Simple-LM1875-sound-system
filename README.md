@@ -52,12 +52,14 @@ To make BTL work, we use a phase splitter. The phase splitter takes in one signa
 
 The power stage is set up as a relatively standard inverting amplifier, but it is not an opamp. The vast majority of amplifier chips cannot drive a speaker. The power stages includes compensation capacitors in the LM1875 feedback loop (the 56pf capacitors) as well as zobel network (2.2ohm + 0.1uf on output). The LM1875 tends to oscillate without a zobel network so it is very important. The feedback capacitors improve square wave response, reducing ringing and indicating good stability. 
 
+The datasheet for the LM1875 recommends designing it with gains of 10 or greater for stability purposes, so the power stage has 10 gain. 
+
 <p align="center">
   <img src="Images/BTL_Amp_Stability.jpg" width="300"><br>
   <em>Power stage tuned with 56pf capacitor with 8 ohm test load</em>
 </p>
 
-The datasheet for the LM1875 recommends designing it with gains of 10 or greater for stability purposes, so the power stage has 10 gain. 
+
 
 
 <br>
