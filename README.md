@@ -118,6 +118,11 @@ I included three LEDs on the power rails. I would recommend adding at least one 
 
 Add some pictures that include drilling the heat sink and showing jsut the power stage screwed to the heat sink. Mention a little bit of vegetable oil was used with a metal drill bit and it was incredibly easy to drill. The drill bet set was like $8.
 
+<p align="center">
+  <img src="Images/Amp_On_Heat_Sink.png" width="45%" />
+  <img src="Images/Aluminum_L_Bar.png" width="45%" /><br>
+ <em>Left: Drilling the heat sink,   Right: Power stage on heat sink</em>
+</p>
 
 
 
