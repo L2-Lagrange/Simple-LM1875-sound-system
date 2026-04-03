@@ -27,6 +27,11 @@ The reciever board also uses a buffered voltage reference, but its power setup i
 
 The most important feature of the receiver board is the 2nd order ~35khz cutoff filter. This is what allows us to use cheap bluetooth recievers, or arbitrary signal sources. The topography originally came from a Texas Instruments design manual, but they have removed it from the internet. I redesigned it for 35khz and this version works well for audio.
 
+<p align="center">
+  <img src="Images/FilterPic1.png" width="45%" />
+  <img src="Images/FilterPic2.png" width="45%" />
+</p>
+
 Explain the filter board here:
 
 Add filter board measurements:
