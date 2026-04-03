@@ -46,8 +46,7 @@ The most important feature of the receiver board is the 2nd order ~35khz cutoff 
  <em>Sine wave before (yellow) and after (blue) the 35khz filter</em>
 </p>
  
-*Explain filter results, and then mention the inverting gain stage and output buffer
-
+This is an example of what the lowpass filter after a DAC accomplishes. The yellow signal is the output from the [bluetooth receiver]((https://www.amazon.com/hiBCTR-Wireless-Bluetooth-Audio-Receiver/dp/B0FDLGMMYC/ref=sr_1_8?crid=350EUMJXBN4NV&dib=eyJ2IjoiMSJ9.Hz_ZgfGwXoIZV5nocs7b126nDdCcdYSbgK9A1z3RJKLhT1cz--GEa3WTc_r3OOHGRY9FarT_VZx-J5lBDyLFj8vOGiySonwBIZ1kvVUOeB1Q8dR2eUkfJ7Q_jlzzyOuEYd0lVI_-uhTDe1ct_fYaA3AArWnHJAKOYzXvK3QndtL3qvyXXTN7THovINOcq88VqpU_mcGi9XMeYuAU9Y2iQcgw7ReGjUXgMcREKI2Z7GU.sa2W5zidMW-tkHYAYGa7TfbJ-GyrVTsSYmgwTngp6ZE&dib_tag=se&keywords=bluetooth+module&qid=1775198601&sprefix=bluetooth+modu%2Caps%2C182&sr=8-8)), and the yellow signal is the output from the bluetooth receiver and the blue signal is the output of the 35khz filter. The high frequency noise has been significantly removed, and the output is much cleaner. This sine wave is then inverted again by the inverting gain stage (0-10 gain) and then finally sent to the output buffer. 
 
 
 
@@ -70,3 +69,5 @@ Dropping 24V to 5V on a linear regulator is a lot, and the rail draws more than 
 There is a lot of wiggle room for capacitance on the rails. For the capacitor voltage rating, use a value that is around 50% higher than your power rail. For a 24V rail you want to use at least 35V rated capacitors. I used 50V rated capacitors in my build.
 
 The reciever is interchangable, and the system would greatly benifit from a higher quality reciever. One can be made with an ESP32 and PCM5102 module, or you can use a professoinal bluetooth reciever. Depending on what reciever you use, you can get by without the filter board entirely.
+
+The receiver board could be used with any other amplifier system, but you may want to re-design the voltage rails.
