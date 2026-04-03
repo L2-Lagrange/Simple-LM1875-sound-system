@@ -50,9 +50,10 @@ The LM1875 power stage has a BTL output. This means the output is taken across a
 
 To make BTL work, we use a phase splitter. The phase splitter takes in one signal, and outputs the original signal as well as its inverted version. The phase splitter outputs drive the LM1875 power amplifier stage. This design runs from a single DC rail instead of positive and negative rails, so the phase splitter and power stage require a virtual ground. It uses a buffered voltage divider (Vref buffer) to generate and distribute the virtual ground to the TL074 and LM1875 amplifiers. The virtual ground at half the supply voltage is what allows us to run the system with a single +24V rail. 
 
-The power stage is set up as a relatively standard inverting amplifier, but it is not an opamp. The vast majority of amplifier chips cannot drive a speaker. The power stages includes compensation capacitors in the LM1875 feedback loop (the 56pf capacitors) as well as zobel network (2.2ohm + 0.1uf on output). The LM1875 tends to oscillate without a zobel network so it is very important. The feedback capacitors improve square wave response, reducing ringing and indicating good stability. 
+The power stage is set up as a relatively standard inverting amplifier, but it is not an opamp. The datasheet for the LM1875 recommends designing it with gains of 10 or greater for stability purposes, so the power stage has 10 gain. The vast majority of amplifier chips cannot drive a speaker, which is why we are using the LM1875. The LM1875 is still avalible in standard supply chains.
 
-The datasheet for the LM1875 recommends designing it with gains of 10 or greater for stability purposes, so the power stage has 10 gain. 
+The power stages includes compensation capacitors in the LM1875 feedback loop (the 56pf capacitors) as well as zobel network (2.2ohm + 0.1uf on output). The LM1875 tends to oscillate without a zobel network so it is very important. The feedback capacitors improve square wave response, reducing ringing and indicating good stability. 
+
 
 <p align="center">
   <img src="Images/BTL_Amp_Stability.jpg" width="300"><br>
