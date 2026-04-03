@@ -11,7 +11,7 @@ Below is my design for a simple, modular LM1875 bridge tied load (BTL) sound sys
 </p>
 
 
-The system is modular and consists of two boards. There is a reciever board that includes an analog filter for reducing DAC noise followed by a gain stage and output buffer. The other board is the LM1875 power amplifier board with an input buffer, phase splitter, and bridge-tied-load output. 
+The system is modular and consists of two boards. There is a reciever board that includes an analog filter for reducing DAC noise followed by a gain stage and output buffer. The other board is the LM1875 power amplifier board with an input buffer, phase splitter, and bridge-tied-load output. Each subystem can be built one at a time on breadboard or perfboard and tested before building the next stage.  
 
 <p align="center">
   <img src="Images/LM1875_System_Block_Diagram.jpg" width="600"><br>
