@@ -75,7 +75,7 @@ The power calculations get a little bit complicated due to the BTL changing 'how
 <p align="center">
   <img src="Images/AmpTestSetup2.png" width="45%" />
   <img src="Images/8_ohm_max_power.png" width="45%" /><br>
- <em>Left: Test setup    Right: Max power into 8 ohms before clipping</em>
+ <em>Left: Test setup,    Right: Max power into 8 ohms before clipping</em>
 </p>
 
 The maximum output voltage before clipping is roughly 14.6V pk-pk per channel. This means the voltage across the load would be 29.2V pk-pk (10.36Vrms). At this point we can use (V^2)/R to estimate a power output of 13.42W before noticable distortion. This is significantly louder than you would expect. It can operate into clipping and still sound good. The power output is similar into a 4 ohm load, but it has less voltage headroom before clipping and and significantly higher current. 
@@ -84,7 +84,7 @@ The maximum output voltage before clipping is roughly 14.6V pk-pk per channel. T
 <p align="center">
   <img src="Images/8_ohm_start_clipping.png" width="45%" />
   <img src="Images/8_ohm_clipping.png" width="45%" /><br>
- <em>Left: Onset of clipping with 8 ohm load   Right: Clipping with 8 ohm load</em>
+ <em>Left: Onset of clipping with 8 ohm load,   Right: Clipping with 8 ohm load</em>
 </p>
 
 As the system approaches clipping on the output, it gets a little bit of fuzz on top of the sine wave before flattening out with increasing amplitude. When listening to music the bass tends to clip first so it doesnt sound too bad. This system could be designed with two power stages. One for a subwoofer, and one for a mid/tweeter and it would significantly improve any bass clipping issues.
