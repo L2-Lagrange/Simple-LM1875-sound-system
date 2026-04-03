@@ -1,5 +1,5 @@
 # Simple-LM1875-sound-system
-This is my design for a simple LM1875 bridge-tied-load sound system. It is simple to build while having great performance. The system is powered by a single DC voltage source between 20-30V (24V recommended), and performs great with cheap 24V wall power supply bricks. This means you do not need to worry about designing a power supply to use this design.
+This is my design for a simple LM1875 bridge-tied-load sound system. It is simple to build while having great performance. The system is powered by a single DC voltage source between 18-30V, and performs great with cheap 24V wall power supply bricks. This means you do not need to worry about designing a power supply to use this design.
 
 
 <p align="center">
