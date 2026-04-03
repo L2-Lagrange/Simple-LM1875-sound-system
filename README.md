@@ -124,8 +124,8 @@ I included three LEDs on the power rails. I would recommend adding at least one 
 </p>
 
 <p align="center">
-  <img src="Images/Power_Rail_LEDs.jpg" width="45%" />
-  <img src="Images/Amp_Lights.jpg" width="45%" /><br>
+  <img src="Images/Power_Rail_LEDs.jpg" width="250" />
+  <img src="Images/Amp_Lights.jpg" width="250" /><br>
  <em>Power rail LEDs</em>
 </p>
 
