@@ -8,22 +8,17 @@ Below is my design for a simple, modular LM1875 bridge-tied-load (BTL) sound sys
 
 The system will work with any standard audio signal source input, it does not need to be a bluetooth receiver. In this case my signal source is a [$3 bluetooth reciever module from Amazon](https://www.amazon.com/hiBCTR-Wireless-Bluetooth-Audio-Receiver/dp/B0FDLGMMYC/ref=sr_1_8?crid=350EUMJXBN4NV&dib=eyJ2IjoiMSJ9.Hz_ZgfGwXoIZV5nocs7b126nDdCcdYSbgK9A1z3RJKLhT1cz--GEa3WTc_r3OOHGRY9FarT_VZx-J5lBDyLFj8vOGiySonwBIZ1kvVUOeB1Q8dR2eUkfJ7Q_jlzzyOuEYd0lVI_-uhTDe1ct_fYaA3AArWnHJAKOYzXvK3QndtL3qvyXXTN7THovINOcq88VqpU_mcGi9XMeYuAU9Y2iQcgw7ReGjUXgMcREKI2Z7GU.sa2W5zidMW-tkHYAYGa7TfbJ-GyrVTsSYmgwTngp6ZE&dib_tag=se&keywords=bluetooth+module&qid=1775198601&sprefix=bluetooth+modu%2Caps%2C182&sr=8-8), which is improved with an analog filter stage. You could also use it as a guitar amplifier or something similar.
 
-Proper heat sinking is very important for the power stage. I used an aluminum L bar which gave me space to mount both boards, but you can get by with [significantly smaller heat sinks](https://www.amazon.com/dp/B07B62V4FP?ref=nb_sb_ss_w_as-reorder_k5_1_9&amp=&crid=2OR320LZAT9D7&sprefix=heat%2Bsink&th=1) especially during testing.
 
-The semiconductors and electrolitic capacitors for this project were ordered from Digikey. The LM1875 chips are the most important component to get from a reliable source. Do not buy them on Amazon. The components used in this build are sourced from a mix of Amazon and Digikey.
 
 <p align="center">
   <img src="Images/System_Image.png" width="500"><br>
   <em> Image of prototype </em>
 </p>
 
- 
-
-
-
-
-
 The system is modular and consists of two main boards. One is a reciever board that includes an analog filter for reducing DAC noise, followed by a gain stage and output buffer. The other is an LM1875 power amplifier board with an input buffer, phase splitter, and bridge-tied-load output. Each subystem can be built one at a time on breadboard/perfboard and tested before building the next stage. 
+
+ Proper heat sinking is very important for the power stage. I used an aluminum L bar which gave me space to mount both boards, but you can get by with [significantly smaller heat sinks](https://www.amazon.com/dp/B07B62V4FP?ref=nb_sb_ss_w_as-reorder_k5_1_9&amp=&crid=2OR320LZAT9D7&sprefix=heat%2Bsink&th=1) especially during testing.
+
 
 <p align="center">
   <img src="Images/LM1875_System_Block_Diagram.jpg" width="600"><br>
@@ -71,6 +66,7 @@ Add info about the non BTL inverting amp version:
 
 Add a small schematic showing the 3 LED's on the 24V rails. 4700 ohm resistor, two purple, one white. They are great power indicators and help discharge the large capacitors when it turns off.
 
+The semiconductors and electrolitic capacitors for this project were ordered from Digikey. The LM1875 chips are the most important component to get from a reliable source. Do not buy them on Amazon. 
 
 The system is powered by a single DC voltage source between 18-30V, and performs great with [cheap 24V wall power supply bricks](https://www.amazon.com/100V-240V-Terminal-Connector-Adapter-5-5x2-1mm/dp/B0CW598HV8/ref=sr_1_2_sspa?crid=SO4U9JPWYUSR&dib=eyJ2IjoiMSJ9.Wj2MH52ngXubGGHn_jR5-tq3j1g8CH6NQ8uUdveCFZiM2RgN0ZBpEiFOTj8VnqWan0aAO3ANwrCY0JCexMZ2bsMjlpHWn8h4nfXn2Z3OHU4LRMzv8ZXsNwfGOxvwVAQx-4uxml4SoSLu7E3XRWt--kh5I8faRnT2te4GcDbC0yMmAZibx5akN4-dxBs6_6iZVO-5CSu8_1-fQMGQsTG-56A2ATmhaNWGmlust4Jhq9M.yrbyAWJkabPssMtkYnAYnOK17R7ZLXuvFp0E1h8N3uQ&dib_tag=se&keywords=24v+power+supply&qid=1775199681&sprefix=24v+power+supply%2Caps%2C168&sr=8-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1). This means you do not need to build a power supply to design a similar system.
 
