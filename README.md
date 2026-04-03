@@ -116,7 +116,7 @@ I placed my prototype on the aluminum L bar and used a sharpie to mark where I n
 
 <p align="center">
   <img src="Images/Amp_On_Heat_Sink.png" width="45%" />
-  <img src="Images/aluminum_L_Bar.png" width="45%" /><br>
+  <img src="Images/Aluminum_L_Bar.png" width="45%" /><br>
  <em>Left: Power stage on heat sink ,   Right: Drilling the heat sink</em>
 </p>
 
