@@ -65,7 +65,7 @@ The signal then goes to the input stage of the power stage board, which is anoth
 
 
 
-<p align="center"><strong>Power Measurements:</strong></p>
+<p align="center"><strong>Output Power Measurements:</strong></p>
 
 The power stage measurements were taken 'single ended,' which means the measurement are taken from one amplifier output to ground as opposed to taking the output across the load. This is because the bridge-tied-load is floating with respect to ground. To interperet the measurements, you would double the voltage across the load (the output is differential). You could also measure both channels and add them using an oscilloscope math function. 
 
@@ -81,7 +81,6 @@ The power calculations get a little bit complicated due to the BTL changing 'how
 The maximum output voltage before clipping is roughly 14.6V pk-pk per channel. This means the voltage across the load would be 29.2V pk-pk (10.36Vrms). At this point we can use (V^2)/R to estimate a power output of 13.42W before noticable distortion. This is significantly louder than you would expect. It can operate into clipping and still sound good. The power output is similar into a 4 ohm load, but it has less voltage headroom before clipping and and significantly higher current. 
 
 
-***8 ohm clipping:
 <p align="center">
   <img src="Images/8_ohm_start_clipping.png" width="45%" />
   <img src="Images/8_ohm_clipping.png" width="45%" /><br>
@@ -90,6 +89,7 @@ The maximum output voltage before clipping is roughly 14.6V pk-pk per channel. T
 
 As the system approaches clipping on the output, it gets a little bit of fuzz on top of the sine wave before flattening out with increasing amplitude. When listening to music the bass tends to clip first so it doesnt sound too bad. This system could be designed with two power stages. One for a subwoofer, and one for a mid/tweeter and it would significantly improve any bass clipping issues.
 
+<p align="center"><strong>LM1875 Single Supply Inverting Amplifier (not BTL)</strong></p>
 
 When building this system for the first time it really helps to build a simple version of the power stage. The design below is a simple LM1875 inverting power stage I designed. The output capacitor is very important in this design, but it should be removed for BTL.
 
