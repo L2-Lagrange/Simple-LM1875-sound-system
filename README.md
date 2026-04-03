@@ -104,8 +104,9 @@ I included three LEDs on the power rails. I would recommend adding at least one 
   <em>Schematic: Power rail LEDs</em>
 </p>
 
+<p align="center"><strong>Heat Sink</strong></p>
 
-Add some pictures that include drilling the heat sink and showing jsut the power stage screwed to the heat sink. Mention a little bit of vegetable oil was used with a metal drill bit and it was incredibly easy to drill. The drill bet set was like $8.
+For the heat sink I used an [aluminum L bar](https://www.amazon.com/OTTFF-Bracket-Aluminum-Profile-Corner/dp/B0DD3BDWT6/ref=sr_1_13_sspa?crid=NWHNVKTNWDWK&dib=eyJ2IjoiMSJ9.3lqkSy_1tIseBWWlXdlBdSEmRhE-Rx_bb3Os7jGHl061zo6Ga8ugW3anRHhAlIHmEX9L9mXfjqnInrIVF0CHL6XLlJ8O5qnR_Q6PoSIVi2l1GZtheZwjiWftY51wPAiDF5afrFLWItTNZZgt3t-9OmcnLiZ8LC9iwN5BocVDpLeVbqNR0kSKs2d4SOxMVvK_OFKItOmMeJvcVm29MXuqZ8s5Fdgtk36lw4-VXlDhtxwcZhHVL3RORzHaMdX7IZwGdDMlNOx0qafE5TKaUvVn2LjGORAoF8k29z1f6jBQUus.u9ICEjOiQ6GWpiQ1JEwhYfzI56MgqMsP2FVNNBgjboc&dib_tag=se&keywords=aluminum%2Bl%2Bbar&qid=1775218270&s=industrial&sprefix=aluminum%2Bl%2Bb%2Cindustrial%2C161&sr=1-13-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9tdGY&th=1) which gave me space to mount both boards, but you can get by with [significantly smaller heat sinks](https://www.amazon.com/dp/B07B62V4FP?ref=nb_sb_ss_w_as-reorder_k5_1_9&amp=&crid=2OR320LZAT9D7&sprefix=heat%2Bsink&th=1). I placed my prototype on the board and used a sharpie to mark where I needed to drill. I used cheap drill bits appropriate for copper and added a little bit of vegetable oil to the drill hole. This worked very well.
 
 <p align="center">
   <img src="Images/Amp_On_Heat_Sink.png" width="45%" />
@@ -113,6 +114,7 @@ Add some pictures that include drilling the heat sink and showing jsut the power
  <em>Left: Drilling the heat sink,   Right: Power stage on heat sink</em>
 </p>
 
+I was then able to attach the power stage to the heat sink and test it. This is also a great example of the power amplifier being used with a completey different input source.
 
 
 <p align="center">
