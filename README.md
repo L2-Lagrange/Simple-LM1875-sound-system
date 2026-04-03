@@ -10,6 +10,8 @@ The system will work with any standard audio signal source input, it does not ne
 
 Proper heat sinking is very important for the power stage. I used an aluminum L bar which gave me space to mount both boards, but you can get by with [significantly smaller heat sinks](https://www.amazon.com/dp/B07B62V4FP?ref=nb_sb_ss_w_as-reorder_k5_1_9&amp=&crid=2OR320LZAT9D7&sprefix=heat%2Bsink&th=1) especially during testing.
 
+The semiconductors and electrolitic capacitors for this project were ordered from Digikey. The LM1875 chips are the most important component to get from a reliable source. Do not buy them on Amazon. The components used in this build are sourced from a mix of Amazon and Digikey.
+
 <p align="center">
   <img src="Images/System_Image.png" width="500"><br>
   <em> Image of prototype </em>
