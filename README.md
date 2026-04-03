@@ -28,7 +28,7 @@ Proper heat sinking is very important for the power stage. I used an [aluminum L
   <em>System block diagram</em>
 </p>
 
-<p align="center"><strong>Power Stage</strong></p>
+<p align="center"><strong>Power Stage:</strong></p>
 
 The LM1875 power stage has a BTL output. This means the output is taken across a pair of amplifiers that have opposite outputs which doubles the voltage. Doubling the voltage increases power output by roughly 4 times compared to a single non BTL LM1875, schematic below, making it more practical to build loud analog amplifiers at low voltage rails.
 
@@ -41,6 +41,7 @@ To make BTL work, we use a phase splitter. The phase splitter takes in one signa
 
 The power stage is set up as a relatively standard inverting amplifier, but it is not an opamp. The vast majority of amplifier chips cannot drive a power stage. The power stage includes a compensation capacitors in the LM1875 feedback loop (the 56pf capacitors) as well as zobel network (2.2ohm + 0.1uf on output). The LM1875 tends to oscillate without a zobel network so it is very important. The feedback capacitors do a good job of cleaning up square wave edges which indicate good stability. The datasheet for the LM1875 recommends designing it with gains of 10 or greater for stability purposes, so the power stage has 10 gain. 
 
+<p align="center"><strong>Receiver Board:</strong></p>
 
 The reciever board also uses a buffered voltage divider, but its power setup is more complicated due to the addition of the LM7805 and LM7812 voltage regulators. The regulators are seperated from the main power bus by a pi filter. This is helpful for cleaning up some noise from cheap wall power supplies. The 7812 regulator is there to power the 12V analog filter section, and the 7805 regulator is used to power the 5V reciever board. (Depending on opamp and receiver choice, this board could be made to run on a single 3.3V rail.)
 
