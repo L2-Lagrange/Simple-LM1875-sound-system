@@ -57,7 +57,8 @@ This is an example of what the lowpass filter after a DAC accomplishes. The yell
 The signal then goes to the input stage of the power stage board, which is another buffer. These buffers are for modularity and stage seperation, but they could be removed. The power stage has 10 gain, and is BTL. 
 
 
-Power Measurements:
+
+<p align="center"><strong>Power Measurements:</strong></p>
 
 The power stage measurements were taken 'single ended,' which means the measurement are taken from one amplifier output to ground as opposed to taking the output across the load. This is because the bridge-tied-load is floating with respect to ground. To interperet the measurements, you would double the voltage across the load (the output is differential). You could also measure both channels and add them using an oscilloscope math function. 
 
