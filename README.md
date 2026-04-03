@@ -59,7 +59,9 @@ The signal then goes to the input stage of the power stage board, which is anoth
 
 Power Measurements:
 
-My measurements on the power stage output are taken 'single ended,' which means the measurement are taken from one amplifier output to ground, as opposed to taking the output across the load. This is because the bridge-tied-load is floating with respect to ground. To interperet the measurements, you would double the voltage across the load. You could also measure both channels and add them using an oscilloscope function. The power calculations get a little bit complicated due to the BTL changing 'how the amplifier sees the load.' This configuratoin makes the amplifier 'see' half the resistance of the load, so it 'sees' 4 ohms when connected to an 8 ohm load. 
+My measurements on the power stage output were taken 'single ended,' which means the measurement are taken from one amplifier output to ground, as opposed to taking the output across the load. This is because the bridge-tied-load is floating with respect to ground. To interperet the measurements, you would double the voltage across the load (the output is differential). You could also measure both channels and add them using an oscilloscope math function. 
+
+The power calculations get a little bit complicated due to the BTL changing 'how the amplifier sees the load.' This configuration makes each amplifier half bridge 'see' half the resistance of the load, so it 'sees' 4 ohms when connected to an 8 ohm load. 
 
 The maximum output voltage before clipping is roughly 14.6V pk-pk per channel. This means the voltage across the load would be 29.2V pk-pk (10.36Vrms). At this point we can use (V^2)/R to estimate a power output of 13.42W before noticable distortion. This is significantly louder than you would expect, and it can operate into clipping and still sound good. The power output is similar into a 4 ohm load, but it has less voltage headroom before clipping and and significantly higher current. 
 
