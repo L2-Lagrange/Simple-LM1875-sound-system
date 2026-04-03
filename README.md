@@ -1,6 +1,6 @@
 # Simple-LM1875-sound-system
 <p align="center"><strong>Introduction</strong></p>
-Below is my design for a simple, modular LM1875 bridge-tied-load (BTL) sound system. It is a practical analog amplifier system that is easy to build, has great performance, runs from a wide variety of DC power supplies, and makes for a great analog system design learning project. The core system is the power amplifier board, but I also provided information on the receiver I used for this version of the build.
+Below is my design for a simple, modular LM1875 bridge-tied-load (BTL) sound system. It is a practical analog amplifier system that is easy to build, has great performance, runs from a wide variety of DC power supplies, and makes for a great analog system design learning project. The core system is the power amplifier board, but I also provided information on the receiver I used for this version of the build. In this document I sometimes reiterate things I believe are important.
 
 
 <p align="center">
@@ -10,8 +10,7 @@ Below is my design for a simple, modular LM1875 bridge-tied-load (BTL) sound sys
 
 <p align="center"><strong>The Design:</strong></p>
 
-The system will work with any standard audio signal source input, it does not need to be a bluetooth receiver. In this case my signal source is a [$3 bluetooth reciever module from Amazon](https://www.amazon.com/hiBCTR-Wireless-Bluetooth-Audio-Receiver/dp/B0FDLGMMYC/ref=sr_1_8?crid=350EUMJXBN4NV&dib=eyJ2IjoiMSJ9.Hz_ZgfGwXoIZV5nocs7b126nDdCcdYSbgK9A1z3RJKLhT1cz--GEa3WTc_r3OOHGRY9FarT_VZx-J5lBDyLFj8vOGiySonwBIZ1kvVUOeB1Q8dR2eUkfJ7Q_jlzzyOuEYd0lVI_-uhTDe1ct_fYaA3AArWnHJAKOYzXvK3QndtL3qvyXXTN7THovINOcq88VqpU_mcGi9XMeYuAU9Y2iQcgw7ReGjUXgMcREKI2Z7GU.sa2W5zidMW-tkHYAYGa7TfbJ-GyrVTsSYmgwTngp6ZE&dib_tag=se&keywords=bluetooth+module&qid=1775198601&sprefix=bluetooth+modu%2Caps%2C182&sr=8-8), which is improved with an analog filter stage. You could also use it as a guitar amplifier or something similar.
-
+The system will work with any standard audio signal source input, it does not need to be a bluetooth receiver. In this case my signal source is a [$3 bluetooth reciever module from Amazon](https://www.amazon.com/hiBCTR-Wireless-Bluetooth-Audio-Receiver/dp/B0FDLGMMYC/ref=sr_1_8?crid=350EUMJXBN4NV&dib=eyJ2IjoiMSJ9.Hz_ZgfGwXoIZV5nocs7b126nDdCcdYSbgK9A1z3RJKLhT1cz--GEa3WTc_r3OOHGRY9FarT_VZx-J5lBDyLFj8vOGiySonwBIZ1kvVUOeB1Q8dR2eUkfJ7Q_jlzzyOuEYd0lVI_-uhTDe1ct_fYaA3AArWnHJAKOYzXvK3QndtL3qvyXXTN7THovINOcq88VqpU_mcGi9XMeYuAU9Y2iQcgw7ReGjUXgMcREKI2Z7GU.sa2W5zidMW-tkHYAYGa7TfbJ-GyrVTsSYmgwTngp6ZE&dib_tag=se&keywords=bluetooth+module&qid=1775198601&sprefix=bluetooth+modu%2Caps%2C182&sr=8-8), which is improved with an analog filter stage. You could also use the design as a guitar amplifier or something similar.
 
 
 <p align="center">
@@ -19,7 +18,7 @@ The system will work with any standard audio signal source input, it does not ne
   <em> Image of prototype </em>
 </p>
 
-The system is modular and consists of two main boards. One is a reciever board that includes an analog filter for reducing DAC noise, followed by a gain stage and output buffer. The other board is an LM1875 power amplifier board with an input buffer, phase splitter, and bridge-tied-load output. Each subystem can be built one at a time on breadboard/perfboard and tested before building the next stage. 
+The system is modular and consists of two main boards. One board is a reciever that includes an analog filter for reducing DAC noise, followed by a gain stage and output buffer. The other board is an LM1875 power amplifier board with an input buffer, phase splitter, and bridge-tied-load output. Each subystem can be built one at a time on breadboard/perfboard and tested before building the next stage. 
 
 Proper heat sinking is very important for the power stage. I used an [aluminum L bar](https://www.amazon.com/OTTFF-Bracket-Aluminum-Profile-Corner/dp/B0DD3BDWT6/ref=sr_1_13_sspa?crid=NWHNVKTNWDWK&dib=eyJ2IjoiMSJ9.3lqkSy_1tIseBWWlXdlBdSEmRhE-Rx_bb3Os7jGHl061zo6Ga8ugW3anRHhAlIHmEX9L9mXfjqnInrIVF0CHL6XLlJ8O5qnR_Q6PoSIVi2l1GZtheZwjiWftY51wPAiDF5afrFLWItTNZZgt3t-9OmcnLiZ8LC9iwN5BocVDpLeVbqNR0kSKs2d4SOxMVvK_OFKItOmMeJvcVm29MXuqZ8s5Fdgtk36lw4-VXlDhtxwcZhHVL3RORzHaMdX7IZwGdDMlNOx0qafE5TKaUvVn2LjGORAoF8k29z1f6jBQUus.u9ICEjOiQ6GWpiQ1JEwhYfzI56MgqMsP2FVNNBgjboc&dib_tag=se&keywords=aluminum%2Bl%2Bbar&qid=1775218270&s=industrial&sprefix=aluminum%2Bl%2Bb%2Cindustrial%2C161&sr=1-13-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9tdGY&th=1) which gave me space to mount both boards, but you can get by with [significantly smaller heat sinks](https://www.amazon.com/dp/B07B62V4FP?ref=nb_sb_ss_w_as-reorder_k5_1_9&amp=&crid=2OR320LZAT9D7&sprefix=heat%2Bsink&th=1) especially during testing. A small amount of thermal paste significantly improves the thermal transfer from the LM1875 chips to the heat sink.
 
