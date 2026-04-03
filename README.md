@@ -46,7 +46,7 @@ The most important feature of the receiver board is the 2nd order ~35khz cutoff 
  <em>Sine wave before (yellow) and after (blue) the 35khz filter</em>
 </p>
  
-
+*Explain filter results, and then mention the inverting gain stage and output buffer
 
 
 
