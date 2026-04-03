@@ -58,7 +58,7 @@ The receiver board also uses a buffered voltage divider, but its power setup is 
   <em>Schematic:  Receiver/Filter board</em>
 </p>
 
-The most important feature of the receiver board is the 2nd order ~35khz cutoff filter. This is what allows us to use various bluetooth receivers, or arbitrary signal sources. The noise is technically higher than audible frequency, but its good design to get rid of it. The 2nd order filter topography originally came from a Texas Instruments design manual, but they have removed it from the internet. I redesigned it for 35khz and this version works well for audio.
+The most important feature of the receiver board is the 2nd order ~35khz cutoff filter. This is what allows us to use various bluetooth receivers, or arbitrary signal sources. The noise is technically higher than audible frequency, but its good design to get rid of it. The 2nd order filter topology originally came from a Texas Instruments design manual, but they have removed it from the internet. I redesigned it for 35khz and this version works well for audio.
 
 <p align="center">
   <img src="Images/FilterPic1.png" width="45%" />
@@ -68,13 +68,13 @@ The most important feature of the receiver board is the 2nd order ~35khz cutoff 
  
 The above images are an example of what the lowpass filter after a DAC accomplishes. The yellow signal is the output from the [bluetooth receiver](https://www.amazon.com/hiBCTR-Wireless-Bluetooth-Audio-Receiver/dp/B0FDLGMMYC/ref=sr_1_8?crid=350EUMJXBN4NV&dib=eyJ2IjoiMSJ9.Hz_ZgfGwXoIZV5nocs7b126nDdCcdYSbgK9A1z3RJKLhT1cz--GEa3WTc_r3OOHGRY9FarT_VZx-J5lBDyLFj8vOGiySonwBIZ1kvVUOeB1Q8dR2eUkfJ7Q_jlzzyOuEYd0lVI_-uhTDe1ct_fYaA3AArWnHJAKOYzXvK3QndtL3qvyXXTN7THovINOcq88VqpU_mcGi9XMeYuAU9Y2iQcgw7ReGjUXgMcREKI2Z7GU.sa2W5zidMW-tkHYAYGa7TfbJ-GyrVTsSYmgwTngp6ZE&dib_tag=se&keywords=bluetooth+module&qid=1775198601&sprefix=bluetooth+modu%2Caps%2C182&sr=8-8), and the blue signal is the output of the 35khz filter. The high frequency noise has been significantly removed, and the output is much cleaner. This sine wave is then reinverted by the gain stage (0-10 gain magnitude) and then finally sent to the output buffer. 
 
-The signal then goes to the input stage of the power stage board, which is another buffer. These buffers are for modularity and stage seperation, but they could be removed. After the buffer the signal is phase split to drive the BTL power stage.
+The signal then goes to the input stage of the power stage board, which is another buffer. These buffers are for modularity and stage separation, but they could be removed. After the buffer the signal is phase split to drive the BTL power stage.
 
 <br>
 <br>
 <p align="center"><strong>Output Power Measurements:</strong></p>
 
-The power stage measurements were taken 'single ended,' which means the measurement are taken from one amplifier output to ground as opposed to taking the output across the load. This is because the bridge-tied-load is floating with respect to ground. To interpret the measurements, you would double the voltage across the load (the output is differential). You could also measure both channels and add them using an oscilloscope math function. 
+The power stage measurements are taken 'single ended,' which means the measurement are taken from one amplifier output to ground as opposed to taking the output across the load. This is because the bridge-tied-load is floating with respect to ground. To interpret the measurements, you would double the voltage across the load (the output is differential). You could also measure both channels and add them using an oscilloscope math function. 
 
 The power calculations get a little bit complicated due to the BTL changing 'how the amplifier sees the load.' This configuration makes each amplifier half bridge 'see' half the resistance of the load, so it 'sees' 4 ohms when connected to an 8 ohm load. 
 
@@ -85,7 +85,7 @@ The power calculations get a little bit complicated due to the BTL changing 'how
  <em>Left: Test setup,    Right: Max power into 8 ohms before clipping</em>
 </p>
 
-The maximum output voltage before clipping is roughly 14.6V pk-pk per channel. This means the voltage across the load would be 29.2V pk-pk (10.36Vrms). At this point we can use (V^2)/R to estimate a power output of 13.42W before noticeable distortion. This is significantly louder than you would expect. It can operate into clipping and still sound good. The power output is similar into a 4 ohm load, but it has less voltage headroom before clipping and significantly higher current. (I may have made a mistake in my calculations)
+The maximum output voltage before clipping is roughly 14.6V pk-pk per channel. This means the voltage across the load would be 29.2V pk-pk (10.36Vrms). At this point we can use (V^2)/R to estimate a power output of 13.42W before noticeable distortion. This is significantly louder than you would expect. It can operate into clipping and still sound good. The power output is similar into a 4 ohm load, but it has less voltage headroom before clipping and significantly higher current. 
 
 
 <p align="center">
@@ -133,7 +133,7 @@ When building this system for the first time it helps to build a simple version 
   <em>LM1875 non BTL inverting power amplifier</em>
 </p>
 
-This can easily be tuned on a breadboard. I've also solder together several of this power stage to use in my [LR4 active system](https://www.linkwitzlab.com/filters.htm) design. It has great performance on its own, but significantly better power performance as a BTL. The feedback capacitor can be tuned while measuring a 10khz square wave and looking at the edges. I tuned it by swapping out capacitor values and taking measurements. Below is an image of the properly tuned LM1875 power stage square wave. Notice the lack of ringing on the edges.
+This can easily be tuned on a breadboard. I've also built three soldered versions to use in my [LR4 active system](https://www.linkwitzlab.com/filters.htm) design. It has great performance on its own, but significantly better power performance as a BTL. The feedback capacitor can be tuned while measuring a 10khz square wave and looking at the edges. I tuned it by swapping out capacitor values and taking measurements. Below is an image of the properly tuned LM1875 power stage square wave. Notice the lack of ringing on the edges.
 
 <p align="center">
   <img src="Images/Non_BTL_Square_Wave.jpg" width="400"><br>
