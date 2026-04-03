@@ -1,4 +1,5 @@
 # Simple-LM1875-sound-system
+<br>
 <p align="center"><strong>Introduction</strong></p>
 Below is my design for a simple, modular LM1875 bridge-tied-load (BTL) sound system. It is a practical analog amplifier system that is easy to build, has great performance, runs from a wide variety of DC power supplies, and makes for a great analog system design learning project. 
 The core system is the power amplifier board, but I also provided information on the receiver I used for this version of the build.<br>
@@ -10,6 +11,7 @@ The core system is the power amplifier board, but I also provided information on
   <em>Amplifier system sitting on 3d printed speaker</em>
 </p>
 
+<br>
 <br>
 
 <p align="center"><strong>The Design:</strong></p>
@@ -30,7 +32,7 @@ This design is modular and consists of two main boards. One board is a reciever 
   <img src="Images/LM1875_System_Block_Diagram.jpg" width="600"><br>
   <em>System block diagram</em>
 </p>
-
+<br>
 <br>
 
 <p align="center"><strong>Power Stage:</strong></p>
@@ -69,7 +71,7 @@ The above images are an example of what the lowpass filter after a DAC accomplis
 The signal then goes to the input stage of the power stage board, which is another buffer. These buffers are for modularity and stage seperation, but they could be removed. After the buffer the signal is phase split to drive the BTL power stage.
 
 <br>
-
+<br>
 <p align="center"><strong>Output Power Measurements:</strong></p>
 
 The power stage measurements were taken 'single ended,' which means the measurement are taken from one amplifier output to ground as opposed to taking the output across the load. This is because the bridge-tied-load is floating with respect to ground. To interperet the measurements, you would double the voltage across the load (the output is differential). You could also measure both channels and add them using an oscilloscope math function. 
@@ -93,7 +95,7 @@ The maximum output voltage before clipping is roughly 14.6V pk-pk per channel. T
 </p>
 
 As the system approaches clipping, it gets a little bit of fuzz on top of the sine wave before flattening out with increasing input amplitude. When listening to music the bass tends to clip a tiny bit first and its not auidable. 
-
+<br>
 <br>
 <p align="center"><strong>LEDs</strong></p>
 
@@ -104,6 +106,7 @@ I included three LEDs on the power rails. I would recommend adding at least one 
   <img src="Images/Power_Rail_LEDs.jpg" width="250"><br>
   <em>Schematic: Power rail LEDs</em>
 </p>
+<br>
 <br>
 <p align="center"><strong>Heat Sink</strong></p>
 
@@ -119,6 +122,8 @@ I placed my prototype on the alumium L bar and used a sharpie to mark where I ne
 
 Once a heat sink is drilled the LM1875 chips can be connected to it. Make sure to plan your builds to include the heat sink from the start. It is very difficult to properly heat sink chips that are populated in the center of boards, and you do not want your system to be completely limited by heat sink performance.
 
+<br>
+<br>
 <p align="center"><strong>LM1875 Single Supply Inverting Amplifier (not BTL)</strong></p>
 
 When building this system for the first time it helps to build a simple version of the power stage. The design below is an LM1875 inverting power stage I designed. The output capacitor is very important in this design, but it should be removed for BTL.
@@ -135,7 +140,11 @@ This can easily be tuned on a breadboard. I've also solder together several of t
   <em>Stable square wave resulting from proper compensation</em>
 </p>
 
-Small points: (Clean this up later)
+
+
+<br>
+<br>
+<p align="center"><strong>Build Notes:</strong></p>
 
 The semiconductors and electrolitic capacitors for this project were ordered from Digikey. The LM1875 chips are the most important component to get from a reliable source. Do not buy them on Amazon. 
 
