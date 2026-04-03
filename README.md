@@ -16,7 +16,6 @@ The LM1875 power stage has a bridge-tied-load output. This means the output is t
 
 To make this work, we use a phase splitter. The phase splitter takes in one signal, and outputs the same signal as well as its inverted version. The plase splitter complementary outputs drive the LM1875 power amplifier stage. This design runs from a single DC rail instead of positive and negative rails, so the phase splitter and power stage require a virtual ground. This design uses a buffered voltage divider to generate and distribute the virtual ground to the TL074 and LM1875 amplifiers. The virtual ground at Vdc/2 ~ 12V is what allows us to run the system with a single +24V rail. 
 
-The power rails have bulk electrolytic capacitors and low ESR ceramic capacitors. The main power rail has two large electrolytic capacitors near to the LM1875 chips, with the 0.1uf ceramic capacitors being nearly directly on the pins of the TL074 and two LM1875’s. The 10uf capacitors are not that important. You may choose using more or less capacitance on the rails, but I would not recommend using much less.
 
 
 
@@ -26,6 +25,8 @@ The power rails have bulk electrolytic capacitors and low ESR ceramic capacitors
   <img src="Images/Bluetooth_Rx_Analog_Filter_Single_Supply.png" width="800"><br>
   <em>Bluetooth Receiver Analog Filter Board With Gain</em>
 </p>
+
+The power rails have bulk electrolytic capacitors and low ESR ceramic capacitors. The main power rail has two large electrolytic capacitors near to the LM1875 chips, with the 0.1uf ceramic capacitors being nearly directly on the pins of the TL074 and two LM1875’s. The 10uf capacitors are not that important. The reciever board has a bulk 2200uf capacitor on it, but the reciever board can be build with far less capacitance. Only add extra bulk capacitance to that rail if you are using it as a power bus for a larger system. All of the chips on the reciever board also have 0.1uf ceramic capacitors immediately near the power pins. You can add more or less capacitance or capacitors on the rails. You must pay attention to the voltage rating on the capacitor. If you will only use 24V rails, use at least 35V rated capacitors. I used 50V rated parts for my version but I plan on stress testing it at 30V.
 
 The system is powered by a single DC voltage source between 18-30V, and performs great with [cheap 24V wall power supply bricks](https://www.amazon.com/100V-240V-Terminal-Connector-Adapter-5-5x2-1mm/dp/B0CW598HV8/ref=sr_1_2_sspa?crid=SO4U9JPWYUSR&dib=eyJ2IjoiMSJ9.Wj2MH52ngXubGGHn_jR5-tq3j1g8CH6NQ8uUdveCFZiM2RgN0ZBpEiFOTj8VnqWan0aAO3ANwrCY0JCexMZ2bsMjlpHWn8h4nfXn2Z3OHU4LRMzv8ZXsNwfGOxvwVAQx-4uxml4SoSLu7E3XRWt--kh5I8faRnT2te4GcDbC0yMmAZibx5akN4-dxBs6_6iZVO-5CSu8_1-fQMGQsTG-56A2ATmhaNWGmlust4Jhq9M.yrbyAWJkabPssMtkYnAYnOK17R7ZLXuvFp0E1h8N3uQ&dib_tag=se&keywords=24v+power+supply&qid=1775199681&sprefix=24v+power+supply%2Caps%2C168&sr=8-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1). This means you do not need to build a power supply to design a similar system.
 
