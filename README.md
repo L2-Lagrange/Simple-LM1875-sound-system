@@ -93,7 +93,7 @@ As the system approaches clipping, it gets a little bit of fuzz on top of the si
 <p align="center"><strong>LEDs</strong></p>
 
 
-I included three LEDs on the power rails. I would recommend adding at least one to each board. It is incredibly useful to have some indicator that the circuit is on and the capacitors are charged. It also gives the bulk capacitors a discharge path so they fully discharge when the circuit is turned off. I chose to use an extra LED for visual reasons. I used two purple LEDs and a white LED.
+I included three LEDs on the power rails. I would recommend adding at least one to each board. They indicate whether or not the circuit is on and the capacitors are charged. It also gives the capacitors a discharge path when the circuit is powered off. I chose to use an extra LED for visual reasons.
 
 <p align="center">
   <img src="Images/Power_Rail_LEDs.jpg" width="250"><br>
