@@ -7,7 +7,7 @@ Below is my design for a simple, modular LM1875 bridge tied load (BTL) sound sys
 
 <p align="center">
   <img src="Images/Amplifier_With_Speaker.jpg" width="300"><br>
-  <em>Schematic:  Amplifier system sitting on 3d printed speaker</em>
+  <em>Amplifier system sitting on 3d printed speaker</em>
 </p>
 
 
