@@ -70,7 +70,12 @@ This is an example of what the lowpass filter after a DAC accomplishes. The yell
  <em>Left: Onset of clipping with 8 ohm load   Right: Clipping with 8 ohm load</em>
 </p>
 
+***Single supply inverting stage, non BTL
 
+<p align="center">
+  <img src="Images/LM1875_Single_Supply_Inverting.jpg" width="600"><br>
+  <em>LM1875 non BTL inverting power amplifier</em>
+</p>
 
 Add power board measurements:
 
