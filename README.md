@@ -91,14 +91,14 @@ As the system approaches clipping on the output, it gets a little bit of fuzz on
 
 <p align="center"><strong>LM1875 Single Supply Inverting Amplifier (not BTL)</strong></p>
 
-When building this system for the first time it really helps to build a simple version of the power stage. The design below is a simple LM1875 inverting power stage I designed. The output capacitor is very important in this design, but it should be removed for BTL.
+When building this system for the first time it helps to build a simple version of the power stage. The design below is an LM1875 inverting power stage I designed. The output capacitor is very important in this design, but it should be removed for BTL.
 
 <p align="center">
   <img src="Images/LM1875_Single_Supply_Inverting.png" width="600"><br>
   <em>LM1875 non BTL inverting power amplifier</em>
 </p>
 
-This can easily be built on a breadboard, which I have done several times. I've also built several of this power stage to use in my LR4 active system design. It has great performance on its own, but significantly better power performance as a BTL.
+This can easily be built on a breadboard, which I have done several times. I've also built several of this power stage to use in my LR4 active system design. It has great performance on its own, but significantly better power performance as a BTL. The feedback capacitor can be tuned whlie measuring a 10khz square wave and looking at the edges. I tuned it by swapping out capacitor values and taking measurements. This is a valuable experiment.
 
 
 Add power board measurements:
