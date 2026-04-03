@@ -98,7 +98,7 @@ When building this system for the first time it helps to build a simple version 
   <em>LM1875 non BTL inverting power amplifier</em>
 </p>
 
-This can easily be built on a breadboard, which I have done several times. I've also built several of this power stage to use in my LR4 active system design. It has great performance on its own, but significantly better power performance as a BTL. The feedback capacitor can be tuned whlie measuring a 10khz square wave and looking at the edges. I tuned it by swapping out capacitor values and taking measurements. Below is an image of the properly tuned LM1875 power stage square wave. Notice the lack of ringing on the edges.
+This can easily be tuned on a breadboard. I've also solder together several of this power stage to use in my [LR4 active system](https://www.linkwitzlab.com/filters.htm) design. It has great performance on its own, but significantly better power performance as a BTL. The feedback capacitor can be tuned whlie measuring a 10khz square wave and looking at the edges. I tuned it by swapping out capacitor values and taking measurements. Below is an image of the properly tuned LM1875 power stage square wave. Notice the lack of ringing on the edges.
 
 <p align="center">
   <img src="Images/Non_BTL_Square_Wave.jpg" width="400"><br>
