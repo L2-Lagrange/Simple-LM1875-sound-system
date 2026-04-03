@@ -87,7 +87,7 @@ The maximum output voltage before clipping is roughly 14.6V pk-pk per channel. T
  <em>Left: Onset of clipping with 8 ohm load,   Right: Clipping with 8 ohm load</em>
 </p>
 
-As the system approaches clipping on the output, it gets a little bit of fuzz on top of the sine wave before flattening out with increasing amplitude. When listening to music the bass tends to clip first so it doesnt sound too bad. This system could be designed with two power stages. One for a subwoofer, and one for a mid/tweeter and it would significantly improve any bass clipping issues.
+As the system approaches clipping, it gets a little bit of fuzz on top of the sine wave before flattening out with increasing input amplitude. When listening to music the bass tends to clip a tiny bit first and its not auidable. 
 
 <p align="center"><strong>LM1875 Single Supply Inverting Amplifier (not BTL)</strong></p>
 
@@ -105,11 +105,10 @@ This can easily be tuned on a breadboard. I've also solder together several of t
   <em>Stable square wave resulting from proper compensation</em>
 </p>
 
-Add power board measurements:
+<p align="center"><strong>LEDs</strong></p>
 
-Add info about the non BTL inverting amp version:
 
-Add a small schematic showing the 3 LED's on the 24V rails. 4700 ohm resistor, two purple, one white. They are great power indicators and help discharge the large capacitors when it turns off.
+I included three LEDs on the power rails. I would recommend adding at least one to each board. It is incredibly useful to have some indicator that the circuit is on and the capacitors are charged. It also gives the bulk capacitors a discharge path so they fully discharge when the circuit is turned off. I chose to use an extra LED for visual reasons. I used two purple LEDs and a white LED.
 
 <p align="center">
   <img src="Images/Power_Rail_LEDs.jpg" width="250"><br>
