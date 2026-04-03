@@ -8,6 +8,7 @@ I did not plan on uploading the design, but after a few weeks of testing this pr
 
 <p align="center">
   <img src="Images/Amplifier_With_Speaker.jpg" width="300"><br>
+  <em>Schematic:  Amplifier system sitting on 3d printed speaker</em>
 </p>
 
 
