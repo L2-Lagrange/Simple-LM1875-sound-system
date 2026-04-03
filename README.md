@@ -2,5 +2,5 @@
 This design includes a LM1875 bridge-tied-load power stage with input buffer and phase splitter. It also includes a receiver board with a filter and a gain stage.
 
 <p align="center">
-  <img src="images/Amplifier_With_Speaker.jpg" width="600">
+  <img src="Images/Amplifier_With_Speaker.jpg" width="600">
 </p>
