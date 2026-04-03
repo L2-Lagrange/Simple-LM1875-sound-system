@@ -1,5 +1,5 @@
 # Simple-LM1875-sound-system
-This is my design for a simple LM1875 bridge-tied-load sound system. I wanted to design a practical analog amplifier system that is easy to build, has great performance, and makes for quality educatoinal material. 
+This is my design for a simple LM1875 bridge-tied-load sound system. I wanted to design a practical analog amplifier system that is easy to build, has great performance, and makes for quality educatoinal material. I have been testing this design for a few weeks and I am very happy with it. 
 
 
 <p align="center">
