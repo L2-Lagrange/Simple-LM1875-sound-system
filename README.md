@@ -122,6 +122,15 @@ I included three LEDs on the power rails. I would recommend adding at least one 
   <img src="Images/Power_Rail_LEDs.jpg" width="250"><br>
   <em>Schematic: Power rail LEDs</em>
 </p>
+
+<p align="center">
+  <img src="Images/Power_Rail_LEDs.jpg" width="45%" />
+  <img src="Images/Amp_Lights.jpg" width="45%" /><br>
+ <em>Power rail LEDs</em>
+</p>
+
+
+
 <br>
 <br>
 <p align="center"><strong>Heat Sink:</strong></p>
