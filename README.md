@@ -24,7 +24,7 @@ The LM1875 power stage has a BTL output. This means the output is taken across a
 
 <p align="center">
   <img src="Images/LM1875_Single_Supply_BTL.png" width="800"><br>
-  <em>Schematic:  LM1875 Single Supply Bridge-Tied-Load Schematic</em>
+  <em>Schematic:  Power Stage with phase splitter</em>
 </p>
 
 To make BTL work, we use a phase splitter. The phase splitter takes in one signal, and outputs the original signal as well as its inverted version. The plase splitter outputs drive the LM1875 power amplifier stage. This design runs from a single DC rail instead of positive and negative rails, so the phase splitter and power stage require a virtual ground. It uses a buffered voltage divider to generate and distribute the virtual ground to the TL074 and LM1875 amplifiers. The virtual ground at half the supply voltage is what allows us to run the system with a single +24V rail. 
@@ -35,7 +35,7 @@ The reciever board also uses a buffered voltage reference, but its power setup i
 
 <p align="center">
   <img src="Images/Bluetooth_Rx_Analog_Filter_Single_Supply.png" width="800"><br>
-  <em>Schematic:  Bluetooth Receiver Analog Filter Board With Gain</em>
+  <em>Schematic:  Receiver/Filter boardn</em>
 </p>
 
 The most important feature of the receiver board is the 2nd order ~35khz cutoff filter. This is what allows us to use cheap bluetooth recievers, or arbitrary signal sources. The topography originally came from a Texas Instruments design manual, but they have removed it from the internet. I redesigned it for 35khz and this version works well for audio.
