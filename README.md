@@ -4,7 +4,6 @@ This is my design for a simple LM1875 bridge-tied-load sound system. It is easy 
 
 <p align="center">
   <img src="Images/Amplifier_With_Speaker.jpg" width="300"><br>
-  <em>Amplifier connected to speaker</em>
 </p>
 
 
