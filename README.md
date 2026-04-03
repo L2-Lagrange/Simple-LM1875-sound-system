@@ -23,6 +23,8 @@ The system will work with any standard audio signal source input, it does not ne
   <em> LM1875 amplifier system prototype </em>
 </p>
 
+<br>
+
 This design is modular and consists of two main boards. One board is a reciever that includes an analog filter for reducing DAC noise, followed by a gain stage and output buffer. The other board is an LM1875 power amplifier board with an input buffer, phase splitter, and bridge-tied-load output. Each subsystem can be built one at a time on breadboard/perfboard and tested before building the next stage. They can also be used as building blocks for other systems.
 
 
