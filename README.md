@@ -59,12 +59,9 @@ The signal then goes to the input stage of the power stage board, which is anoth
 
 Power Measurements:
 
-My measurements on the power stage output were taken 'single ended,' which means the measurement are taken from one amplifier output to ground, as opposed to taking the output across the load. This is because the bridge-tied-load is floating with respect to ground. To interperet the measurements, you would double the voltage across the load (the output is differential). You could also measure both channels and add them using an oscilloscope math function. 
+The power stage measurements were taken 'single ended,' which means the measurement are taken from one amplifier output to ground as opposed to taking the output across the load. This is because the bridge-tied-load is floating with respect to ground. To interperet the measurements, you would double the voltage across the load (the output is differential). You could also measure both channels and add them using an oscilloscope math function. 
 
 The power calculations get a little bit complicated due to the BTL changing 'how the amplifier sees the load.' This configuration makes each amplifier half bridge 'see' half the resistance of the load, so it 'sees' 4 ohms when connected to an 8 ohm load. 
-
-The maximum output voltage before clipping is roughly 14.6V pk-pk per channel. This means the voltage across the load would be 29.2V pk-pk (10.36Vrms). At this point we can use (V^2)/R to estimate a power output of 13.42W before noticable distortion. This is significantly louder than you would expect, and it can operate into clipping and still sound good. The power output is similar into a 4 ohm load, but it has less voltage headroom before clipping and and significantly higher current. 
-
 
 
 <p align="center">
@@ -73,6 +70,9 @@ The maximum output voltage before clipping is roughly 14.6V pk-pk per channel. T
  <em>Left: Test setup    Right: Max power into 8 ohms before clipping</em>
 </p>
 
+The maximum output voltage before clipping is roughly 14.6V pk-pk per channel. This means the voltage across the load would be 29.2V pk-pk (10.36Vrms). At this point we can use (V^2)/R to estimate a power output of 13.42W before noticable distortion. This is significantly louder than you would expect. It can operate into clipping and still sound good. The power output is similar into a 4 ohm load, but it has less voltage headroom before clipping and and significantly higher current. 
+
+
 ***8 ohm clipping:
 <p align="center">
   <img src="Images/8_ohm_start_clipping.png" width="45%" />
@@ -80,7 +80,13 @@ The maximum output voltage before clipping is roughly 14.6V pk-pk per channel. T
  <em>Left: Onset of clipping with 8 ohm load   Right: Clipping with 8 ohm load</em>
 </p>
 
+As the system approaches clipping on the output, it gets a little bit of fuzz on top of the sine wave before flattening out with increasing amplitude. When listening to music the bass tends to clip first so it doesnt sound too bad. This system could be designed with two power stages. One for a subwoofer, and one for a mid/tweeter and it would significantly improve any bass clipping issues.
+
+When building this system for the first time it really helps to build a simple version of the power stage. The design below is a simple LM1875 inverting power stage I designed. The output capacitor is very important in this design, but it should be removed for BTL.
+
 ***Single supply inverting stage, non BTL
+
+This can easily be built on a breadboard, which I have done several times. I've also built several of this power stage to use in my LR4 active system design. It has great performance on its own, but significantly better power performance as a BTL.
 
 <p align="center">
   <img src="Images/LM1875_Single_Supply_Inverting.png" width="600"><br>
