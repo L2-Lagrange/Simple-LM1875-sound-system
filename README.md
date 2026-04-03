@@ -43,7 +43,7 @@ The most important feature of the receiver board is the 2nd order ~35khz cutoff 
 <p align="center">
   <img src="Images/FilterPic1.png" width="45%" />
   <img src="Images/FilterPic2.png" width="45%" /><br>
- <em>Before and after filter</em>
+ <em>Sine wave before (yellow) and after (blue) the 35khz filter</em>
 </p>
  
 
