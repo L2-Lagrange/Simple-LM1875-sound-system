@@ -117,7 +117,7 @@ I placed my prototype on the alumium L bar and used a sharpie to mark where I ne
 <p align="center">
   <img src="Images/Amp_On_Heat_Sink.png" width="45%" />
   <img src="Images/aluminum_L_Bar.png" width="45%" /><br>
- <em>Left:Power stage on heat sink ,   Right: Drilling the heat sink</em>
+ <em>Left: Power stage on heat sink ,   Right: Drilling the heat sink</em>
 </p>
 
 Once a heat sink is drilled the LM1875 chips can be connected to it. Make sure to plan your builds to include the heat sink from the start. It is very difficult to properly heat sink chips that are populated in the center of boards, and you do not want your system to be completely limited by heat sink performance.
