@@ -11,7 +11,7 @@ This is my design for a simple LM1875 bridge-tied-load sound system. It is easy 
 There are two main subystems on seperate boards. The most important board is the power amplifier. 
 
 <p align="center">
-  <img src="IMAGES/LM1875_Single_Supply_BTL.png" width="300"><br>
+  <img src="Images/LM1875_Single_Supply_BTL.png" width="300"><br>
   <em>LM1875 Single Supply Bridge-Tied-Load Schematic</em>
 </p>
 
