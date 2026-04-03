@@ -89,10 +89,6 @@ The maximum output voltage before clipping is roughly 14.6V pk-pk per channel. T
 
 As the system approaches clipping, it gets a little bit of fuzz on top of the sine wave before flattening out with increasing input amplitude. When listening to music the bass tends to clip a tiny bit first and its not auidable. 
 
-<p align="center"><strong>LM1875 Single Supply Inverting Amplifier (not BTL)</strong></p>
-
-When building this system for the first time it helps to build a simple version of the power stage. The design below is an LM1875 inverting power stage I designed. The output capacitor is very important in this design, but it should be removed for BTL.
-
 
 <p align="center"><strong>LEDs</strong></p>
 
@@ -116,6 +112,9 @@ For the heat sink I used an [aluminum L bar](https://www.amazon.com/OTTFF-Bracke
 
 I was then able to attach the power stage to the heat sink and test it. This is also a great example of the power amplifier being used with a completey different input source.
 
+<p align="center"><strong>LM1875 Single Supply Inverting Amplifier (not BTL)</strong></p>
+
+When building this system for the first time it helps to build a simple version of the power stage. The design below is an LM1875 inverting power stage I designed. The output capacitor is very important in this design, but it should be removed for BTL.
 
 <p align="center">
   <img src="Images/LM1875_Single_Supply_Inverting.png" width="600"><br>
