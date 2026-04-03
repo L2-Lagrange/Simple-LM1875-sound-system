@@ -7,18 +7,16 @@ This is my design for a simple LM1875 bridge-tied-load sound system. I wanted to
 </p>
 
 
-The LM1875 power stage has a bridge-tied-load output. This means the output is taken across a pair of amplifiers that have opposite outputs. BTL increases power output by roughly 4 times, making it more practical to build loud analog amplifiers at low voltage rails.
+The LM1875 power stage has a bridge-tied-load output. This means the output is taken across a pair of amplifiers that have opposite outputs. BTL increases power output by roughly 4 times, making it more practical to build loud analog amplifiers at low voltage rails. The power stage includes compensation capacitors in the LM1875 feedback loop (the 56pf capacitors) as well as zobel network (2.2ohm + 0.1uf on output). The LM1875 tends to oscillate without a zobel network so it is very important. The feedback capacitors do a good job of cleaning up square wave edges.
 
 <p align="center">
   <img src="Images/LM1875_Single_Supply_BTL.png" width="800"><br>
   <em>Schematic:  LM1875 Single Supply Bridge-Tied-Load Schematic</em>
 </p>
 
-To make BTL work, we use a phase splitter. The phase splitter takes in one signal, and outputs the same signal as well as its inverted version. The plase splitter complementary outputs drive the LM1875 power amplifier stage. This design runs from a single DC rail instead of positive and negative rails, so the phase splitter and power stage require a virtual ground. This design uses a buffered voltage divider to generate and distribute the virtual ground to the TL074 and LM1875 amplifiers. The virtual ground at half the supply voltage is what allows us to run the system with a single +24V rail. 
+To make BTL work, we use a phase splitter. The phase splitter takes in one signal, and outputs the original signal as well as its inverted version. The plase splitter complementary outputs drive the LM1875 power amplifier stage. This design runs from a single DC rail instead of positive and negative rails, so the phase splitter and power stage require a virtual ground. This design uses a buffered voltage divider to generate and distribute the virtual ground to the TL074 and LM1875 amplifiers. The virtual ground at half the supply voltage is what allows us to run the system with a single +24V rail. 
 
 The power rails include bulk electrolitic capacitors and small ceramic capacitors. It is important to have at least a few thousand uF of capacitance on the power rails for the LM1875 board. It is also important to keep 0.1uf ceramic capacitors immediately near each chip's power pins. I also tend to add a 0.1uf capacitor in parallel next to each bulk cap, and then a few extras around the board for good measure. There is a lot of wiggle room for capacitance on the rails. For the capacitor voltage rating, use a value that is around 50% higher than your power rail. For a 24V rail you want to use at least 35V rated capacitors. I used 50V rated capacitors in my build.
-
-
 
 
 
@@ -27,6 +25,13 @@ The power rails include bulk electrolitic capacitors and small ceramic capacitor
   <em>Schematic:  Bluetooth Receiver Analog Filter Board With Gain</em>
 </p>
 
+Explain the filter board here:
+
+Add filter board measurements:
+
+Add power board measurements:
+
+Add info about the non BTL inverting amp version:
 
 
 
