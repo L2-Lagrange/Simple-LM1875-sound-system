@@ -56,7 +56,7 @@ This is an example of what the lowpass filter after a DAC accomplishes. The yell
 
 
 <p align="center">
-  <img src="Images/AmpTestSetup2.jpg" width="300"><br>
+  <img src="Images/AmpTestSetup2.png" width="300"><br>
   <em>Power measurement test setup into 8 ohm load</em>
 </p>
 
