@@ -1,7 +1,7 @@
 # Simple-LM1875-sound-system
 <p align="center"><strong>Introduction</strong></p>
 Below is my design for a simple, modular LM1875 bridge-tied-load (BTL) sound system. It is a practical analog amplifier system that is easy to build, has great performance, runs from a wide variety of DC power supplies, and makes for a great analog system design learning project. 
-The core system is the power amplifier board, but I also provided information on the receiver I used for this version of the build. In this document I sometimes reiterate things I believe are important.
+The core system is the power amplifier board, but I also provided information on the receiver I used for this version of the build.
 
 
 <p align="center">
@@ -19,8 +19,7 @@ The system will work with any standard audio signal source input, it does not ne
   <em> LM1875 amplifier system prototype </em>
 </p>
 
-The system is modular and consists of two main boards. One board is a reciever that includes an analog filter for reducing DAC noise, followed by a gain stage and output buffer. The other board is an LM1875 power amplifier board with an input buffer, phase splitter, and bridge-tied-load output. Each subystem can be built one at a time on breadboard/perfboard and tested before building the next stage. They can also be used as building blocks for other systems.
-
+This design is modular and consists of two main boards. One board is a reciever that includes an analog filter for reducing DAC noise, followed by a gain stage and output buffer. The other board is an LM1875 power amplifier board with an input buffer, phase splitter, and bridge-tied-load output. Each subsystem can be built one at a time on breadboard/perfboard and tested before building the next stage. They can also be used as building blocks for other systems.
 
 
 <p align="center">
@@ -30,16 +29,16 @@ The system is modular and consists of two main boards. One board is a reciever t
 
 <p align="center"><strong>Power Stage:</strong></p>
 
-The LM1875 power stage has a BTL output. This means the output is taken across a pair of amplifiers that have opposite outputs which doubles the voltage. Doubling the voltage increases power output by roughly 4 times compared to a single non BTL LM1875, schematic below, making it more practical to build loud analog amplifiers at low voltage rails.
+The LM1875 power stage has a BTL output. This means the output is taken across a pair of amplifiers that have opposite outputs which doubles the voltage. Doubling the voltage increases power output by roughly 4 times compared to a single non BTL LM1875 (schematic below) making it more practical to build loud analog amplifiers at low voltage rails.
 
 <p align="center">
   <img src="Images/LM1875_Single_Supply_BTL.png" width="800"><br>
   <em>Schematic:  Power Stage with phase splitter</em>
 </p>
 
-To make BTL work, we use a phase splitter. The phase splitter takes in one signal, and outputs the original signal as well as its inverted version. The plase splitter outputs drive the LM1875 power amplifier stage. This design runs from a single DC rail instead of positive and negative rails, so the phase splitter and power stage require a virtual ground. It uses a buffered voltage divider to generate and distribute the virtual ground to the TL074 and LM1875 amplifiers. The virtual ground at half the supply voltage is what allows us to run the system with a single +24V rail. 
+To make BTL work, we use a phase splitter. The phase splitter takes in one signal, and outputs the original signal as well as its inverted version. The plase splitter outputs drive the LM1875 power amplifier stage. This design runs from a single DC rail instead of positive and negative rails, so the phase splitter and power stage require a virtual ground. It uses a buffered voltage divider (Vref buffer) to generate and distribute the virtual ground to the TL074 and LM1875 amplifiers. The virtual ground at half the supply voltage is what allows us to run the system with a single +24V rail. 
 
-The power stage is set up as a relatively standard inverting amplifier, but it is not an opamp. The vast majority of amplifier chips cannot drive a power stage. The power stage includes a compensation capacitors in the LM1875 feedback loop (the 56pf capacitors) as well as zobel network (2.2ohm + 0.1uf on output). The LM1875 tends to oscillate without a zobel network so it is very important. The feedback capacitors do a good job of cleaning up square wave edges which indicate good stability. The datasheet for the LM1875 recommends designing it with gains of 10 or greater for stability purposes, so the power stage has 10 gain. 
+The power stage is set up as a relatively standard inverting amplifier, but it is not an opamp. The vast majority of amplifier chips cannot drive a speaker. The power stage includes a compensation capacitors in the LM1875 feedback loop (the 56pf capacitors) as well as zobel network (2.2ohm + 0.1uf on output). The LM1875 tends to oscillate without a zobel network so it is very important. The feedback capacitors do a good job of cleaning up square wave edges which indicate good stability. The datasheet for the LM1875 recommends designing it with gains of 10 or greater for stability purposes, so the power stage has 10 gain. 
 
 <p align="center"><strong>Receiver Board:</strong></p>
 
@@ -58,9 +57,9 @@ The most important feature of the receiver board is the 2nd order ~35khz cutoff 
  <em>Sine wave before (yellow) and after (blue) the 35khz filter</em>
 </p>
  
-This is an example of what the lowpass filter after a DAC accomplishes. The yellow signal is the output from the [bluetooth receiver](https://www.amazon.com/hiBCTR-Wireless-Bluetooth-Audio-Receiver/dp/B0FDLGMMYC/ref=sr_1_8?crid=350EUMJXBN4NV&dib=eyJ2IjoiMSJ9.Hz_ZgfGwXoIZV5nocs7b126nDdCcdYSbgK9A1z3RJKLhT1cz--GEa3WTc_r3OOHGRY9FarT_VZx-J5lBDyLFj8vOGiySonwBIZ1kvVUOeB1Q8dR2eUkfJ7Q_jlzzyOuEYd0lVI_-uhTDe1ct_fYaA3AArWnHJAKOYzXvK3QndtL3qvyXXTN7THovINOcq88VqpU_mcGi9XMeYuAU9Y2iQcgw7ReGjUXgMcREKI2Z7GU.sa2W5zidMW-tkHYAYGa7TfbJ-GyrVTsSYmgwTngp6ZE&dib_tag=se&keywords=bluetooth+module&qid=1775198601&sprefix=bluetooth+modu%2Caps%2C182&sr=8-8), and the blue signal is the output of the 35khz filter. The high frequency noise has been significantly removed, and the output is much cleaner. This sine wave is then reinverted by the gain stage (0-10 gain magnitude) and then finally sent to the output buffer. 
+The above images are an example of what the lowpass filter after a DAC accomplishes. The yellow signal is the output from the [bluetooth receiver](https://www.amazon.com/hiBCTR-Wireless-Bluetooth-Audio-Receiver/dp/B0FDLGMMYC/ref=sr_1_8?crid=350EUMJXBN4NV&dib=eyJ2IjoiMSJ9.Hz_ZgfGwXoIZV5nocs7b126nDdCcdYSbgK9A1z3RJKLhT1cz--GEa3WTc_r3OOHGRY9FarT_VZx-J5lBDyLFj8vOGiySonwBIZ1kvVUOeB1Q8dR2eUkfJ7Q_jlzzyOuEYd0lVI_-uhTDe1ct_fYaA3AArWnHJAKOYzXvK3QndtL3qvyXXTN7THovINOcq88VqpU_mcGi9XMeYuAU9Y2iQcgw7ReGjUXgMcREKI2Z7GU.sa2W5zidMW-tkHYAYGa7TfbJ-GyrVTsSYmgwTngp6ZE&dib_tag=se&keywords=bluetooth+module&qid=1775198601&sprefix=bluetooth+modu%2Caps%2C182&sr=8-8), and the blue signal is the output of the 35khz filter. The high frequency noise has been significantly removed, and the output is much cleaner. This sine wave is then reinverted by the gain stage (0-10 gain magnitude) and then finally sent to the output buffer. 
 
-The signal then goes to the input stage of the power stage board, which is another buffer. These buffers are for modularity and stage seperation, but they could be removed. The power stage has 10 gain, and is BTL. 
+The signal then goes to the input stage of the power stage board, which is another buffer. These buffers are for modularity and stage seperation, but they could be removed. After the buffer the signal is phase split to drive the BTL power stage.
 
 
 
@@ -77,7 +76,7 @@ The power calculations get a little bit complicated due to the BTL changing 'how
  <em>Left: Test setup,    Right: Max power into 8 ohms before clipping</em>
 </p>
 
-The maximum output voltage before clipping is roughly 14.6V pk-pk per channel. This means the voltage across the load would be 29.2V pk-pk (10.36Vrms). At this point we can use (V^2)/R to estimate a power output of 13.42W before noticable distortion. This is significantly louder than you would expect. It can operate into clipping and still sound good. The power output is similar into a 4 ohm load, but it has less voltage headroom before clipping and and significantly higher current. 
+The maximum output voltage before clipping is roughly 14.6V pk-pk per channel. This means the voltage across the load would be 29.2V pk-pk (10.36Vrms). At this point we can use (V^2)/R to estimate a power output of 13.42W before noticable distortion. This is significantly louder than you would expect. It can operate into clipping and still sound good. The power output is similar into a 4 ohm load, but it has less voltage headroom before clipping and and significantly higher current. (I may have made a mistake in my calculations)
 
 
 <p align="center">
@@ -92,7 +91,7 @@ As the system approaches clipping, it gets a little bit of fuzz on top of the si
 <p align="center"><strong>LEDs</strong></p>
 
 
-I included three LEDs on the power rails. I would recommend adding at least one to each board. They indicate whether or not the circuit is on and the capacitors are charged. It also gives the capacitors a discharge path when the circuit is powered off. I chose to use an extra LED for visual reasons.
+I included three LEDs on the power rails. I would recommend adding at least one to each board. They indicate whether or not the circuit is on and the capacitors are charged. It also gives the capacitors a discharge path when the circuit is powered off. I chose to use a 3rd LED for visual reasons.
 
 <p align="center">
   <img src="Images/Power_Rail_LEDs.jpg" width="250"><br>
@@ -101,7 +100,9 @@ I included three LEDs on the power rails. I would recommend adding at least one 
 
 <p align="center"><strong>Heat Sink</strong></p>
 
-Proper heat sinking is important for the power stage. For the heat sink I used an [aluminum L bar](https://www.amazon.com/OTTFF-Bracket-Aluminum-Profile-Corner/dp/B0DD3BDWT6/ref=sr_1_13_sspa?crid=NWHNVKTNWDWK&dib=eyJ2IjoiMSJ9.3lqkSy_1tIseBWWlXdlBdSEmRhE-Rx_bb3Os7jGHl061zo6Ga8ugW3anRHhAlIHmEX9L9mXfjqnInrIVF0CHL6XLlJ8O5qnR_Q6PoSIVi2l1GZtheZwjiWftY51wPAiDF5afrFLWItTNZZgt3t-9OmcnLiZ8LC9iwN5BocVDpLeVbqNR0kSKs2d4SOxMVvK_OFKItOmMeJvcVm29MXuqZ8s5Fdgtk36lw4-VXlDhtxwcZhHVL3RORzHaMdX7IZwGdDMlNOx0qafE5TKaUvVn2LjGORAoF8k29z1f6jBQUus.u9ICEjOiQ6GWpiQ1JEwhYfzI56MgqMsP2FVNNBgjboc&dib_tag=se&keywords=aluminum%2Bl%2Bbar&qid=1775218270&s=industrial&sprefix=aluminum%2Bl%2Bb%2Cindustrial%2C161&sr=1-13-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9tdGY&th=1) which gave me space to mount both boards, but you can get by with [significantly smaller heat sinks](https://www.amazon.com/dp/B07B62V4FP?ref=nb_sb_ss_w_as-reorder_k5_1_9&amp=&crid=2OR320LZAT9D7&sprefix=heat%2Bsink&th=1). I placed my prototype on the board and used a sharpie to mark where I needed to drill. I used cheap drill bits appropriate for copper and added a little bit of vegetable oil to the drill hole. This worked very well. A small amount of thermal paste significantly improves the thermal transfer from the LM1875 chips to the heat sink.
+Proper heat sinking is important for the power stage. For the heat sink I used an [aluminum L bar](https://www.amazon.com/OTTFF-Bracket-Aluminum-Profile-Corner/dp/B0DD3BDWT6/ref=sr_1_13_sspa?crid=NWHNVKTNWDWK&dib=eyJ2IjoiMSJ9.3lqkSy_1tIseBWWlXdlBdSEmRhE-Rx_bb3Os7jGHl061zo6Ga8ugW3anRHhAlIHmEX9L9mXfjqnInrIVF0CHL6XLlJ8O5qnR_Q6PoSIVi2l1GZtheZwjiWftY51wPAiDF5afrFLWItTNZZgt3t-9OmcnLiZ8LC9iwN5BocVDpLeVbqNR0kSKs2d4SOxMVvK_OFKItOmMeJvcVm29MXuqZ8s5Fdgtk36lw4-VXlDhtxwcZhHVL3RORzHaMdX7IZwGdDMlNOx0qafE5TKaUvVn2LjGORAoF8k29z1f6jBQUus.u9ICEjOiQ6GWpiQ1JEwhYfzI56MgqMsP2FVNNBgjboc&dib_tag=se&keywords=aluminum%2Bl%2Bbar&qid=1775218270&s=industrial&sprefix=aluminum%2Bl%2Bb%2Cindustrial%2C161&sr=1-13-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9tdGY&th=1) which gave me space to mount both boards on standoffs, but you can get by with [significantly smaller heat sinks](https://www.amazon.com/dp/B07B62V4FP?ref=nb_sb_ss_w_as-reorder_k5_1_9&amp=&crid=2OR320LZAT9D7&sprefix=heat%2Bsink&th=1). You will not be able to test the system at full power with the smaller heat sinks, but it will get plenty loud. 
+
+I placed my prototype on the alumium L bar and used a sharpie to mark where I needed to drill. I used cheap drill bits appropriate for aluminum and added a little bit of vegetable oil to the drill hole (the vegetable oil makes a big difference). This worked very well. A small amount of thermal paste significantly improves the thermal transfer from the LM1875 chips to the heat sink.
 
 <p align="center">
   <img src="Images/Amp_On_Heat_Sink.png" width="45%" />
@@ -109,7 +110,7 @@ Proper heat sinking is important for the power stage. For the heat sink I used a
  <em>Left:Power stage on heat sink ,   Right: Drilling the heat sink</em>
 </p>
 
-I was then able to attach the power stage to the heat sink and test it. This is also a great example of the power amplifier being used with a completey different input source.
+Once a heat sink is drilled the LM1875 chips can be connected to it. Make sure to plan your builds to include the heat sink from the start. It is very difficult to properly heat sink chips that are populated in the center of boards, and you do not want your system to be completely limited by heat sink performance.
 
 <p align="center"><strong>LM1875 Single Supply Inverting Amplifier (not BTL)</strong></p>
 
