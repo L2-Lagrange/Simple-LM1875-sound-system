@@ -86,7 +86,7 @@ Add info about the non BTL inverting amp version:
 Add a small schematic showing the 3 LED's on the 24V rails. 4700 ohm resistor, two purple, one white. They are great power indicators and help discharge the large capacitors when it turns off.
 
 <p align="center">
-  <img src="Images/Power_Rail_LEDs.png" width="600"><br>
+  <img src="Images/Power_Rail_LEDs.jpg" width="600"><br>
   <em>Schematic: Power rail LEDs</em>
 </p>
 
