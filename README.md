@@ -13,9 +13,9 @@ The system will work with any standard audio signal source input, it does not ne
 </p>
 
 
-The system is modular and consists of two main boards: 
--A reciever board that includes an analog filter for reducing DAC noise followed by a gain stage and output buffer. 
--A LM1875 power amplifier board with an input buffer, phase splitter, and bridge-tied-load output. 
+The system is modular and consists of two main boards: <br>
+-A reciever board that includes an analog filter for reducing DAC noise followed by a gain stage and output buffer. <br>
+-A LM1875 power amplifier board with an input buffer, phase splitter, and bridge-tied-load output. <br>
 
 Each subystem can be built one at a time on breadboard/perfboard and tested before building the next stage. 
 
