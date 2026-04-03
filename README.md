@@ -3,4 +3,5 @@ This design includes a LM1875 bridge-tied-load power stage with input buffer and
 
 <p align="center">
   <img src="Images/Amplifier_With_Speaker.jpg" width="600">
+  <em>Amplifier connected to speaker</em>
 </p>
