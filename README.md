@@ -11,7 +11,6 @@ The core system is the power amplifier board, but I also provided information on
 </p>
 
 <br>
-<br>
 
 <p align="center"><strong>The Design:</strong></p>
 
@@ -23,7 +22,6 @@ The system will work with any standard audio signal source input, it does not ne
   <em> LM1875 amplifier system prototype </em>
 </p>
 
-<br>
 
 This design is modular and consists of two main boards. One board is a reciever that includes an analog filter for reducing DAC noise, followed by a gain stage and output buffer. The other board is an LM1875 power amplifier board with an input buffer, phase splitter, and bridge-tied-load output. Each subsystem can be built one at a time on breadboard/perfboard and tested before building the next stage. They can also be used as building blocks for other systems.
 
@@ -46,7 +44,7 @@ The LM1875 power stage has a BTL output. This means the output is taken across a
 
 To make BTL work, we use a phase splitter. The phase splitter takes in one signal, and outputs the original signal as well as its inverted version. The plase splitter outputs drive the LM1875 power amplifier stage. This design runs from a single DC rail instead of positive and negative rails, so the phase splitter and power stage require a virtual ground. It uses a buffered voltage divider (Vref buffer) to generate and distribute the virtual ground to the TL074 and LM1875 amplifiers. The virtual ground at half the supply voltage is what allows us to run the system with a single +24V rail. 
 
-The power stage is set up as a relatively standard inverting amplifier, but it is not an opamp. The vast majority of amplifier chips cannot drive a speaker. The power stage includes a compensation capacitors in the LM1875 feedback loop (the 56pf capacitors) as well as zobel network (2.2ohm + 0.1uf on output). The LM1875 tends to oscillate without a zobel network so it is very important. The feedback capacitors do a good job of cleaning up square wave edges which indicate good stability. The datasheet for the LM1875 recommends designing it with gains of 10 or greater for stability purposes, so the power stage has 10 gain. 
+The power stage is set up as a relatively standard inverting amplifier, but it is not an opamp. The vast majority of amplifier chips cannot drive a speaker. The power stage includes a compensation capacitors in the LM1875 feedback loop (the 56pf capacitors) as well as zobel network (2.2ohm + 0.1uf on output). The LM1875 tends to oscillate without a zobel network so it is very important. The feedback capacitors do a good job of cleaning up square wave edges which indicate good stability. The datasheet for the LM1875 recommends designing it with gains of 10 or greater for stability purposes, so the power stage has 10 gain. <br>
 
 <p align="center"><strong>Receiver Board:</strong></p>
 
@@ -69,7 +67,7 @@ The above images are an example of what the lowpass filter after a DAC accomplis
 
 The signal then goes to the input stage of the power stage board, which is another buffer. These buffers are for modularity and stage seperation, but they could be removed. After the buffer the signal is phase split to drive the BTL power stage.
 
-
+<br>
 
 <p align="center"><strong>Output Power Measurements:</strong></p>
 
@@ -95,7 +93,7 @@ The maximum output voltage before clipping is roughly 14.6V pk-pk per channel. T
 
 As the system approaches clipping, it gets a little bit of fuzz on top of the sine wave before flattening out with increasing input amplitude. When listening to music the bass tends to clip a tiny bit first and its not auidable. 
 
-
+<br>
 <p align="center"><strong>LEDs</strong></p>
 
 
@@ -105,7 +103,7 @@ I included three LEDs on the power rails. I would recommend adding at least one 
   <img src="Images/Power_Rail_LEDs.jpg" width="250"><br>
   <em>Schematic: Power rail LEDs</em>
 </p>
-
+<br>
 <p align="center"><strong>Heat Sink</strong></p>
 
 Proper heat sinking is important for the power stage. For the heat sink I used an [aluminum L bar](https://www.amazon.com/OTTFF-Bracket-Aluminum-Profile-Corner/dp/B0DD3BDWT6/ref=sr_1_13_sspa?crid=NWHNVKTNWDWK&dib=eyJ2IjoiMSJ9.3lqkSy_1tIseBWWlXdlBdSEmRhE-Rx_bb3Os7jGHl061zo6Ga8ugW3anRHhAlIHmEX9L9mXfjqnInrIVF0CHL6XLlJ8O5qnR_Q6PoSIVi2l1GZtheZwjiWftY51wPAiDF5afrFLWItTNZZgt3t-9OmcnLiZ8LC9iwN5BocVDpLeVbqNR0kSKs2d4SOxMVvK_OFKItOmMeJvcVm29MXuqZ8s5Fdgtk36lw4-VXlDhtxwcZhHVL3RORzHaMdX7IZwGdDMlNOx0qafE5TKaUvVn2LjGORAoF8k29z1f6jBQUus.u9ICEjOiQ6GWpiQ1JEwhYfzI56MgqMsP2FVNNBgjboc&dib_tag=se&keywords=aluminum%2Bl%2Bbar&qid=1775218270&s=industrial&sprefix=aluminum%2Bl%2Bb%2Cindustrial%2C161&sr=1-13-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9tdGY&th=1) which gave me space to mount both boards on standoffs, but you can get by with [significantly smaller heat sinks](https://www.amazon.com/dp/B07B62V4FP?ref=nb_sb_ss_w_as-reorder_k5_1_9&amp=&crid=2OR320LZAT9D7&sprefix=heat%2Bsink&th=1). You will not be able to test the system at full power with the smaller heat sinks, but it will get plenty loud. 
@@ -123,7 +121,7 @@ Once a heat sink is drilled the LM1875 chips can be connected to it. Make sure t
 <p align="center"><strong>LM1875 Single Supply Inverting Amplifier (not BTL)</strong></p>
 
 When building this system for the first time it helps to build a simple version of the power stage. The design below is an LM1875 inverting power stage I designed. The output capacitor is very important in this design, but it should be removed for BTL.
-
+<br>
 <p align="center">
   <img src="Images/LM1875_Single_Supply_Inverting.png" width="600"><br>
   <em>LM1875 non BTL inverting power amplifier</em>
