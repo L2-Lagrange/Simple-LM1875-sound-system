@@ -43,11 +43,9 @@ The most important feature of the receiver board is the 2nd order ~35khz cutoff 
 <p align="center">
   <img src="Images/FilterPic1.png" width="45%" />
   <img src="Images/FilterPic2.png" width="45%" />
+ <em>Before and after filter</em>
 </p>
-
-Explain the filter board here:
-
-Add filter board measurements:
+ 
 
 Add power board measurements:
 
