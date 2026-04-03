@@ -11,7 +11,7 @@ The LM1875 power stage has a bridge-tied-load output. This means the output is t
 
 <p align="center">
   <img src="Images/LM1875_Single_Supply_BTL.png" width="800"><br>
-  <em>LM1875 Single Supply Bridge-Tied-Load Schematic</em>
+  <em>Schematic: LM1875 Single Supply Bridge-Tied-Load Schematic</em>
 </p>
 
 To make this work, we use a phase splitter. The phase splitter takes in one signal, and outputs the same signal as well as its inverted version. The plase splitter complementary outputs drive the LM1875 power amplifier stage. This design runs from a single DC rail instead of positive and negative rails, so the phase splitter and power stage require a virtual ground. This design uses a buffered voltage divider to generate and distribute the virtual ground to the TL074 and LM1875 amplifiers. The virtual ground at Vdc/2 ~ 12V is what allows us to run the system with a single +24V rail. 
