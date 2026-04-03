@@ -140,7 +140,8 @@ This can easily be tuned on a breadboard. I've also built three soldered version
   <em>Stable square wave resulting from proper compensation</em>
 </p>
 
-
+***Add a conclusion paragraph
+***Tighten up the "Build Notes" section
 
 <br>
 <br>
