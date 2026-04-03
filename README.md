@@ -58,7 +58,7 @@ The receiver board also uses a buffered voltage divider, but its power setup is 
   <em>Schematic:  Receiver/Filter board</em>
 </p>
 
-The most important feature of the receiver board is the 2nd order ~35khz cutoff filter. This is what allows us to use various bluetooth receivers, or arbitrary signal sources. The noise is technically higher than audiable frequency, but its good design to get rid of it. The 2nd order filter topography originally came from a Texas Instruments design manual, but they have removed it from the internet. I redesigned it for 35khz and this version works well for audio.
+The most important feature of the receiver board is the 2nd order ~35khz cutoff filter. This is what allows us to use various bluetooth receivers, or arbitrary signal sources. The noise is technically higher than audible frequency, but its good design to get rid of it. The 2nd order filter topography originally came from a Texas Instruments design manual, but they have removed it from the internet. I redesigned it for 35khz and this version works well for audio.
 
 <p align="center">
   <img src="Images/FilterPic1.png" width="45%" />
@@ -74,7 +74,7 @@ The signal then goes to the input stage of the power stage board, which is anoth
 <br>
 <p align="center"><strong>Output Power Measurements:</strong></p>
 
-The power stage measurements were taken 'single ended,' which means the measurement are taken from one amplifier output to ground as opposed to taking the output across the load. This is because the bridge-tied-load is floating with respect to ground. To interperet the measurements, you would double the voltage across the load (the output is differential). You could also measure both channels and add them using an oscilloscope math function. 
+The power stage measurements were taken 'single ended,' which means the measurement are taken from one amplifier output to ground as opposed to taking the output across the load. This is because the bridge-tied-load is floating with respect to ground. To interpret the measurements, you would double the voltage across the load (the output is differential). You could also measure both channels and add them using an oscilloscope math function. 
 
 The power calculations get a little bit complicated due to the BTL changing 'how the amplifier sees the load.' This configuration makes each amplifier half bridge 'see' half the resistance of the load, so it 'sees' 4 ohms when connected to an 8 ohm load. 
 
