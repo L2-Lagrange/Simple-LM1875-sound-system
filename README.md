@@ -25,7 +25,7 @@ Proper heat sinking is very important for the power stage. I used an [aluminum L
   <em>System block diagram</em>
 </p>
 
-The LM1875 power stage has a BTL output. This means the output is taken across a pair of amplifiers that have opposite outputs. BTL increases power output by roughly 4 times, making it more practical to build loud analog amplifiers at low voltage rails. 
+The LM1875 power stage has a BTL output. This means the output is taken across a pair of amplifiers that have opposite outputs which doubles the voltage. Doubling the voltage increases power output by roughly 4 times compared to a single non BTL LM1875, schematic below, making it more practical to build loud analog amplifiers at low voltage rails.
 
 <p align="center">
   <img src="Images/LM1875_Single_Supply_BTL.png" width="800"><br>
