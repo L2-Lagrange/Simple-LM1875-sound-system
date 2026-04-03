@@ -7,7 +7,11 @@ This is my design for a simple LM1875 bridge-tied-load sound system. It is easy 
 </p>
 
 
-There are two main subystems on seperate boards. The most important board is the power amplifier. 
+The LM1875 power stage has a bridge-tied-load output. This means the output is taken across one amplifier and an inverted version of that amplifier. BTL increases power output by roughly 4 times, making it more practical to build loud analog amplifiers at low voltage rails.
+To make this work, we use a phase splitter stage. The phase splitter takes in one signal, and outputs the same signal as well as its inverted version. We use both outputs to drive our LM1875 power amplifier stage. 
+By building a buffered voltage reference, we can provide clean DC biasing at half the supply voltage (Vdd/2) to keep our amplifiers properly biased. This is effectively a ‘virtual ground’ most of our signals. A single buffer can be used to bias several amplifiers, and each board in this system has its own Vref buffer.
+The power rails have bulk electrolytic capacitors and low ESR ceramic capacitors. The main power rail has two large electrolytic capacitors near to the LM1875 chips, with the 0.1uf ceramic capacitors being nearly directly on the pins of the TL074 and two LM1875’s. The 10uf capacitors are not that important. You may choose using more or less capacitance on the rails, but I would not recommend using much less.
+
 
 <p align="center">
   <img src="Images/LM1875_Single_Supply_BTL.png" width="800"><br>
