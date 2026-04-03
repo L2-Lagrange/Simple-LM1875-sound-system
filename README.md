@@ -13,7 +13,11 @@ The system will work with any standard audio signal source input, it does not ne
 </p>
 
 
-The system is modular and consists of two main boards. There is a reciever board that includes an analog filter for reducing DAC noise followed by a gain stage and output buffer. The other board is the LM1875 power amplifier board with an input buffer, phase splitter, and bridge-tied-load output. Each subystem can be built one at a time on breadboard or perfboard and tested before building the next stage. The reciever is interchangable, and the system would greatly benifit from a higher quality reciever. One can be made with an ESP32 and PCM5102 module.
+The system is modular and consists of two main boards: 
+-A reciever board that includes an analog filter for reducing DAC noise followed by a gain stage and output buffer. 
+-A LM1875 power amplifier board with an input buffer, phase splitter, and bridge-tied-load output. 
+
+Each subystem can be built one at a time on breadboard/perfboard and tested before building the next stage. 
 
 <p align="center">
   <img src="Images/LM1875_System_Block_Diagram.jpg" width="600"><br>
@@ -66,3 +70,5 @@ The power rails include bulk electrolitic capacitors and small ceramic capacitor
 Dropping 24V to 5V on a linear regulator is a lot, and the rail draws more than ~15-20mA of current it will get extremely hot. You may need a buck converter instead of linear regulator depending on the reciever, or you could use a reciever on a completely different board.
 
 There is a lot of wiggle room for capacitance on the rails. For the capacitor voltage rating, use a value that is around 50% higher than your power rail. For a 24V rail you want to use at least 35V rated capacitors. I used 50V rated capacitors in my build.
+
+The reciever is interchangable, and the system would greatly benifit from a higher quality reciever. One can be made with an ESP32 and PCM5102 module, or you can use a professoinal bluetooth reciever. Depending on what reciever you use, you can get by without the filter board entirely.
