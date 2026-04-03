@@ -54,11 +54,22 @@ The most important feature of the receiver board is the 2nd order ~35khz cutoff 
  
 This is an example of what the lowpass filter after a DAC accomplishes. The yellow signal is the output from the [bluetooth receiver](https://www.amazon.com/hiBCTR-Wireless-Bluetooth-Audio-Receiver/dp/B0FDLGMMYC/ref=sr_1_8?crid=350EUMJXBN4NV&dib=eyJ2IjoiMSJ9.Hz_ZgfGwXoIZV5nocs7b126nDdCcdYSbgK9A1z3RJKLhT1cz--GEa3WTc_r3OOHGRY9FarT_VZx-J5lBDyLFj8vOGiySonwBIZ1kvVUOeB1Q8dR2eUkfJ7Q_jlzzyOuEYd0lVI_-uhTDe1ct_fYaA3AArWnHJAKOYzXvK3QndtL3qvyXXTN7THovINOcq88VqpU_mcGi9XMeYuAU9Y2iQcgw7ReGjUXgMcREKI2Z7GU.sa2W5zidMW-tkHYAYGa7TfbJ-GyrVTsSYmgwTngp6ZE&dib_tag=se&keywords=bluetooth+module&qid=1775198601&sprefix=bluetooth+modu%2Caps%2C182&sr=8-8), and the blue signal is the output of the 35khz filter. The high frequency noise has been significantly removed, and the output is much cleaner. This sine wave is then reinverted by the gain stage (0-10 gain magnitude) and then finally sent to the output buffer. 
 
+
+***Power measurements:
+
 <p align="center">
   <img src="Images/AmpTestSetup2.png" width="45%" />
   <img src="Images/8_ohm_max_power.png" width="45%" /><br>
  <em>Left: Test setup    Right: Max power into 8 ohms before clipping</em>
 </p>
+
+***8 ohm clipping:
+<p align="center">
+  <img src="Images/8_ohm_start_clipping.png" width="45%" />
+  <img src="Images/8_ohm_clipping.png" width="45%" /><br>
+ <em>Left: Onset of clipping with 8 ohm load   Right: Clipping with 8 ohm load</em>
+</p>
+
 
 
 Add power board measurements:
