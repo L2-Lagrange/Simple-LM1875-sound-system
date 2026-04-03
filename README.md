@@ -10,6 +10,10 @@ Below is my design for a simple, modular LM1875 bridge tied load (BTL) sound sys
   <em>Amplifier system sitting on 3d printed speaker</em>
 </p>
 
+<p align="center">
+  <img src="Images/System_Block_Diagram.npg" width="300"><br>
+  <em>System block diagram</em>
+</p>
 
 The LM1875 power stage has a BTL output. This means the output is taken across a pair of amplifiers that have opposite outputs. BTL increases power output by roughly 4 times, making it more practical to build loud analog amplifiers at low voltage rails. 
 
