@@ -82,17 +82,15 @@ The maximum output voltage before clipping is roughly 14.6V pk-pk per channel. T
 
 As the system approaches clipping on the output, it gets a little bit of fuzz on top of the sine wave before flattening out with increasing amplitude. When listening to music the bass tends to clip first so it doesnt sound too bad. This system could be designed with two power stages. One for a subwoofer, and one for a mid/tweeter and it would significantly improve any bass clipping issues.
 
+
 When building this system for the first time it really helps to build a simple version of the power stage. The design below is a simple LM1875 inverting power stage I designed. The output capacitor is very important in this design, but it should be removed for BTL.
-
-***Single supply inverting stage, non BTL
-
-This can easily be built on a breadboard, which I have done several times. I've also built several of this power stage to use in my LR4 active system design. It has great performance on its own, but significantly better power performance as a BTL.
 
 <p align="center">
   <img src="Images/LM1875_Single_Supply_Inverting.png" width="600"><br>
   <em>LM1875 non BTL inverting power amplifier</em>
 </p>
 
+This can easily be built on a breadboard, which I have done several times. I've also built several of this power stage to use in my LR4 active system design. It has great performance on its own, but significantly better power performance as a BTL.
 
 
 Add power board measurements:
