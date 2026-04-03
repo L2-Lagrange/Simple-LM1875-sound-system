@@ -73,9 +73,11 @@ This is an example of what the lowpass filter after a DAC accomplishes. The yell
 ***Single supply inverting stage, non BTL
 
 <p align="center">
-  <img src="Images/LM1875_Single_Supply_Inverting.jpg" width="600"><br>
+  <img src="Images/LM1875_Single_Supply_Inverting.png" width="600"><br>
   <em>LM1875 non BTL inverting power amplifier</em>
 </p>
+
+
 
 Add power board measurements:
 
