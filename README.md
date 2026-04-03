@@ -33,6 +33,8 @@ This design is modular and consists of two main boards. One board is a reciever 
   <em>System block diagram</em>
 </p>
 
+<br>
+
 <p align="center"><strong>Power Stage:</strong></p>
 
 The LM1875 power stage has a BTL output. This means the output is taken across a pair of amplifiers that have opposite outputs which doubles the voltage. Doubling the voltage increases power output by roughly 4 times compared to a single non BTL LM1875 (schematic below) making it more practical to build loud analog amplifiers at low voltage rails.
