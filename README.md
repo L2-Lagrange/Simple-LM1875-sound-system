@@ -7,7 +7,7 @@ This is my design for a simple LM1875 bridge-tied-load sound system. I wanted to
 </p>
 
 
-The LM1875 power stage has a bridge-tied-load output. This means the output is taken across one amplifier and an inverted version of that amplifier. BTL increases power output by roughly 4 times, making it more practical to build loud analog amplifiers at low voltage rails.
+The LM1875 power stage has a bridge-tied-load output. This means the output is taken across a pair of amplifiers that have opposite outputs. BTL increases power output by roughly 4 times, making it more practical to build loud analog amplifiers at low voltage rails.
 
 <p align="center">
   <img src="Images/LM1875_Single_Supply_BTL.png" width="800"><br>
