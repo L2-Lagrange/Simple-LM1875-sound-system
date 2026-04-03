@@ -93,17 +93,6 @@ As the system approaches clipping, it gets a little bit of fuzz on top of the si
 
 When building this system for the first time it helps to build a simple version of the power stage. The design below is an LM1875 inverting power stage I designed. The output capacitor is very important in this design, but it should be removed for BTL.
 
-<p align="center">
-  <img src="Images/LM1875_Single_Supply_Inverting.png" width="600"><br>
-  <em>LM1875 non BTL inverting power amplifier</em>
-</p>
-
-This can easily be tuned on a breadboard. I've also solder together several of this power stage to use in my [LR4 active system](https://www.linkwitzlab.com/filters.htm) design. It has great performance on its own, but significantly better power performance as a BTL. The feedback capacitor can be tuned whlie measuring a 10khz square wave and looking at the edges. I tuned it by swapping out capacitor values and taking measurements. Below is an image of the properly tuned LM1875 power stage square wave. Notice the lack of ringing on the edges.
-
-<p align="center">
-  <img src="Images/Non_BTL_Square_Wave.jpg" width="400"><br>
-  <em>Stable square wave resulting from proper compensation</em>
-</p>
 
 <p align="center"><strong>LEDs</strong></p>
 
@@ -126,6 +115,17 @@ Add some pictures that include drilling the heat sink and showing jsut the power
 
 
 
+<p align="center">
+  <img src="Images/LM1875_Single_Supply_Inverting.png" width="600"><br>
+  <em>LM1875 non BTL inverting power amplifier</em>
+</p>
+
+This can easily be tuned on a breadboard. I've also solder together several of this power stage to use in my [LR4 active system](https://www.linkwitzlab.com/filters.htm) design. It has great performance on its own, but significantly better power performance as a BTL. The feedback capacitor can be tuned whlie measuring a 10khz square wave and looking at the edges. I tuned it by swapping out capacitor values and taking measurements. Below is an image of the properly tuned LM1875 power stage square wave. Notice the lack of ringing on the edges.
+
+<p align="center">
+  <img src="Images/Non_BTL_Square_Wave.jpg" width="400"><br>
+  <em>Stable square wave resulting from proper compensation</em>
+</p>
 
 Small points: (Clean this up later)
 
