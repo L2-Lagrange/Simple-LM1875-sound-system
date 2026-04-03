@@ -11,7 +11,7 @@ Below is my design for a simple, modular LM1875 bridge tied load (BTL) sound sys
 </p>
 
 <p align="center">
-  <img src="Images/LM1875_System_Block_Diagram.jpg" width="300"><br>
+  <img src="Images/LM1875_System_Block_Diagram.jpg" width="600"><br>
   <em>System block diagram</em>
 </p>
 
