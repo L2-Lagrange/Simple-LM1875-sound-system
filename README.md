@@ -14,8 +14,7 @@ The LM1875 power stage has a bridge-tied-load output. This means the output is t
   <em>LM1875 Single Supply Bridge-Tied-Load Schematic</em>
 </p>
 
-To make this work, we use a phase splitter stage. The phase splitter takes in one signal, and outputs the same signal as well as its inverted version. We use both outputs to drive our LM1875 power amplifier stage. 
-By building a buffered voltage reference, we can provide clean DC biasing at half the supply voltage (Vdd/2) to keep our amplifiers properly biased. This is effectively a ‘virtual ground’ most of our signals. A single buffer can be used to bias several amplifiers, and each board in this system has its own Vref buffer.
+To make this work, we use a phase splitter. The phase splitter takes in one signal, and outputs the same signal as well as its inverted version. The plase splitter complementary outputs drive the LM1875 power amplifier stage. This design runs from a single DC rail instead of positive and negative rails, so the phase splitter and power stage require a virtual ground. This design uses a buffered voltage divider to generate and distribute the virtual ground to the TL074 and LM1875 amplifiers. The virtual ground at Vdc/2 ~ 12V is what allows us to run the system with a single +24V rail. 
 
 The power rails have bulk electrolytic capacitors and low ESR ceramic capacitors. The main power rail has two large electrolytic capacitors near to the LM1875 chips, with the 0.1uf ceramic capacitors being nearly directly on the pins of the TL074 and two LM1875’s. The 10uf capacitors are not that important. You may choose using more or less capacitance on the rails, but I would not recommend using much less.
 
