@@ -106,7 +106,7 @@ Proper heat sinking is important for the power stage. For the heat sink I used a
 <p align="center">
   <img src="Images/Amp_On_Heat_Sink.png" width="45%" />
   <img src="Images/Aluminum_L_Bar.png" width="45%" /><br>
- <em>Left: Drilling the heat sink,   Right: Power stage on heat sink</em>
+ <em>Left:Power stage on heat sink ,   Right: Drilling the heat sink</em>
 </p>
 
 I was then able to attach the power stage to the heat sink and test it. This is also a great example of the power amplifier being used with a completey different input source.
