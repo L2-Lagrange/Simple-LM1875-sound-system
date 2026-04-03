@@ -60,7 +60,11 @@ This is an example of what the lowpass filter after a DAC accomplishes. The yell
   <em>Power measurement test setup into 8 ohm load</em>
 </p>
 
-
+<p align="center">
+  <img src="Images/AmpTestSetup2.png" width="45%" />
+  <img src="Images/8_ohm_max_power.png" width="45%" /><br>
+ <em>Left: Test setup    Right: Max power into 8 ohms before clipping</em>
+</p>
 
 
 Add power board measurements:
