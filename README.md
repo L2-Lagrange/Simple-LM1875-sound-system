@@ -160,6 +160,6 @@ Dropping 24V to 5V on a linear regulator is a lot, and the rail draws more than 
 
 There is a lot of wiggle room for capacitance on the rails. For the capacitor voltage rating, use a value that is around 50% higher than your power rail. For a 24V rail you want to use at least 35V rated capacitors. I used 50V rated capacitors in my build.
 
-The receiver is interchangeable, and the system would greatly benefit from a higher quality receiver. One can be made with an ESP32 and PCM5102 module, or you can use a professoinal bluetooth receiver. Depending on what receiver you use, you can get by without the filter board entirely.
+The receiver is interchangeable, and the system would greatly benefit from a higher quality receiver. One can be made with an ESP32 and PCM5102 module, or you can use a professional bluetooth receiver. Depending on what receiver you use, you can get by without the filter board entirely.
 
 The receiver board could be used with any other amplifier system, but you may want to re-design the voltage rails.
