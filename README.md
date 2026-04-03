@@ -1,16 +1,22 @@
 # Simple-LM1875-sound-system
 Below is my design for a simple, modular LM1875 bridge-tied-load (BTL) sound system. It is a practical analog amplifier system that is easy to build, has great performance, runs from a wide variety of DC power supplies, and makes for a great learning project. 
 
-The system will work with any standard audio signal source input, it does not need to be a bluetooth receiver. In this case my signal source is a [$3 bluetooth reciever module from Amazon](https://www.amazon.com/hiBCTR-Wireless-Bluetooth-Audio-Receiver/dp/B0FDLGMMYC/ref=sr_1_8?crid=350EUMJXBN4NV&dib=eyJ2IjoiMSJ9.Hz_ZgfGwXoIZV5nocs7b126nDdCcdYSbgK9A1z3RJKLhT1cz--GEa3WTc_r3OOHGRY9FarT_VZx-J5lBDyLFj8vOGiySonwBIZ1kvVUOeB1Q8dR2eUkfJ7Q_jlzzyOuEYd0lVI_-uhTDe1ct_fYaA3AArWnHJAKOYzXvK3QndtL3qvyXXTN7THovINOcq88VqpU_mcGi9XMeYuAU9Y2iQcgw7ReGjUXgMcREKI2Z7GU.sa2W5zidMW-tkHYAYGa7TfbJ-GyrVTsSYmgwTngp6ZE&dib_tag=se&keywords=bluetooth+module&qid=1775198601&sprefix=bluetooth+modu%2Caps%2C182&sr=8-8), which is improved with an analog filter stage. You could also use it as a guitar amplifier or something similar.
-
-
- 
-
-
 <p align="center">
   <img src="Images/Amplifier_With_Speaker.jpg" width="300"><br>
   <em>Amplifier system sitting on 3d printed speaker</em>
 </p>
+
+The system will work with any standard audio signal source input, it does not need to be a bluetooth receiver. In this case my signal source is a [$3 bluetooth reciever module from Amazon](https://www.amazon.com/hiBCTR-Wireless-Bluetooth-Audio-Receiver/dp/B0FDLGMMYC/ref=sr_1_8?crid=350EUMJXBN4NV&dib=eyJ2IjoiMSJ9.Hz_ZgfGwXoIZV5nocs7b126nDdCcdYSbgK9A1z3RJKLhT1cz--GEa3WTc_r3OOHGRY9FarT_VZx-J5lBDyLFj8vOGiySonwBIZ1kvVUOeB1Q8dR2eUkfJ7Q_jlzzyOuEYd0lVI_-uhTDe1ct_fYaA3AArWnHJAKOYzXvK3QndtL3qvyXXTN7THovINOcq88VqpU_mcGi9XMeYuAU9Y2iQcgw7ReGjUXgMcREKI2Z7GU.sa2W5zidMW-tkHYAYGa7TfbJ-GyrVTsSYmgwTngp6ZE&dib_tag=se&keywords=bluetooth+module&qid=1775198601&sprefix=bluetooth+modu%2Caps%2C182&sr=8-8), which is improved with an analog filter stage. You could also use it as a guitar amplifier or something similar.
+
+<p align="center">
+  <img src="Images/System_Image.png" width="500"><br>
+  <em> Image of prototype </em>
+</p>
+
+ 
+
+
+
 
 
 The system is modular and consists of two main boards. One is a reciever board that includes an analog filter for reducing DAC noise, followed by a gain stage and output buffer. The other is an LM1875 power amplifier board with an input buffer, phase splitter, and bridge-tied-load output. Each subystem can be built one at a time on breadboard/perfboard and tested before building the next stage. 
@@ -31,10 +37,6 @@ To make BTL work, we use a phase splitter. The phase splitter takes in one signa
 
 The power stage includes compensation capacitors in the LM1875 feedback loop (the 56pf capacitors) as well as zobel network (2.2ohm + 0.1uf on output). The LM1875 tends to oscillate without a zobel network so it is very important. The feedback capacitors do a good job of cleaning up square wave edges which indicate good stability. The datasheet for the LM1875 recommends designing it with gains of 10 or greater for stability purposes, so the power stage has 10 gain.
 
-<p align="center">
-  <img src="Images/System_Image.png" width="500"><br>
-  <em> Image of prototype </em>
-</p>
 
 The reciever board also uses a buffered voltage divider, but its power setup is more complicated due to the addition of the LM7805 and LM7812 voltage regulators. The regulators are seperated from the main power bus by a pi filter. This is helpful for cleaning up some noise from cheap wall power supplies. The 7812 regulator is there to power the 12V analog filter section, and the 7805 regulator is used to power the 5V reciever board. (Depending on opamp and receiver choice, this board could be made to run on a single 3.3V rail.)
 
