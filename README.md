@@ -11,6 +11,7 @@ The core system is the power amplifier board, but I also provided information on
   <em>Amplifier system sitting on 3d printed speaker</em>
 </p>
 
+
 <br>
 <br>
 
@@ -163,3 +164,5 @@ Dropping 24V to 5V on a linear regulator is a lot, and the rail draws more than 
 The receiver is interchangeable, and the system would greatly benefit from a higher quality receiver. One can be made pretty easily with an ESP32 devboard and PCM5102 module with the filter stage, or you can use a professional bluetooth receiver. Depending on what receiver you use, you can get by without the filter board entirely.
 
 The receiver board could be used with any other amplifier system, but you may want to re-design the voltage rails so you arent stuck with the 24->5V linear regulator voltage drop.
+
+The STL files for the printer enclosure are avalible the folder "3D-STL-Files." It is not the best design but it works well with the [PRV Audio 4 inch midrange 30W RMS speaker](https://www.amazon.com/PRV-4MR60-4-Midrange-Woofer-Speaker/dp/B00RC3Z9H2/ref=sr_1_3_pp?crid=1KCQM80K1PAQ5&dib=eyJ2IjoiMSJ9.x3e2p23kjf49gjaOcO_Ginvh5fZAL4RJupKdT0HOsPY2IyrSVZsr_lAZDN7yt-1VV6PE8BlDJDUVkZxbkw7uh2w71MyDrd3TqlnQbStcCKdQm9OpM0VgmFTw19aUo9BUUvu2CqzZcZzMKE7OF60JZGnQrp6TJ6GPyvxGsvEhPAU0sSh2_lbeOkQgoihgaUo2EBoLWyqMaLDjNgtfGIgXMiGLnHADxxvJDaDK5QvGixg.dlc8fJVgHgVgwpuQZBXRm12JyQiUWVWKJPb0BeQVfCQ&dib_tag=se&keywords=4+ohm+speaker&qid=1775198332&sprefix=4+ohm+speak%2Caps%2C161&sr=8-3). The sound quality greatly benifits from polyfill and speaker baffle tape. A wood enclosure would work way better.
