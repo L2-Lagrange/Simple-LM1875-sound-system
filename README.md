@@ -32,7 +32,7 @@ To make BTL work, we use a phase splitter. The phase splitter takes in one signa
 The power stage includes compensation capacitors in the LM1875 feedback loop (the 56pf capacitors) as well as zobel network (2.2ohm + 0.1uf on output). The LM1875 tends to oscillate without a zobel network so it is very important. The feedback capacitors do a good job of cleaning up square wave edges which indicate good stability. The datasheet for the LM1875 recommends designing it with gains of 10 or greater for stability purposes, so the power stage has 10 gain.
 
 <p align="center">
-  <img src="Images/System_Image" width="400"><br>
+  <img src="Images/System_Image.png" width="400"><br>
   <em>Schematic:  Image of prototype </em>
 </p>
 
