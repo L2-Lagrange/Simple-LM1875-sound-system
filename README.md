@@ -97,7 +97,7 @@ The maximum output voltage before clipping is roughly 14.6V pk-pk per channel. T
 As the system approaches clipping, it gets a little bit of fuzz on top of the sine wave before flattening out with increasing input amplitude. When listening to music the bass tends to clip a tiny bit first and its not auidable. 
 <br>
 <br>
-<p align="center"><strong>LEDs</strong></p>
+<p align="center"><strong>LEDs:</strong></p>
 
 
 I included three LEDs on the power rails. I would recommend adding at least one to each board. They indicate whether or not the circuit is on and the capacitors are charged. It also gives the capacitors a discharge path when the circuit is powered off. I chose to use a 3rd LED for visual reasons.
@@ -108,7 +108,7 @@ I included three LEDs on the power rails. I would recommend adding at least one 
 </p>
 <br>
 <br>
-<p align="center"><strong>Heat Sink</strong></p>
+<p align="center"><strong>Heat Sink:</strong></p>
 
 Proper heat sinking is important for the power stage. For the heat sink I used an [aluminum L bar](https://www.amazon.com/OTTFF-Bracket-Aluminum-Profile-Corner/dp/B0DD3BDWT6/ref=sr_1_13_sspa?crid=NWHNVKTNWDWK&dib=eyJ2IjoiMSJ9.3lqkSy_1tIseBWWlXdlBdSEmRhE-Rx_bb3Os7jGHl061zo6Ga8ugW3anRHhAlIHmEX9L9mXfjqnInrIVF0CHL6XLlJ8O5qnR_Q6PoSIVi2l1GZtheZwjiWftY51wPAiDF5afrFLWItTNZZgt3t-9OmcnLiZ8LC9iwN5BocVDpLeVbqNR0kSKs2d4SOxMVvK_OFKItOmMeJvcVm29MXuqZ8s5Fdgtk36lw4-VXlDhtxwcZhHVL3RORzHaMdX7IZwGdDMlNOx0qafE5TKaUvVn2LjGORAoF8k29z1f6jBQUus.u9ICEjOiQ6GWpiQ1JEwhYfzI56MgqMsP2FVNNBgjboc&dib_tag=se&keywords=aluminum%2Bl%2Bbar&qid=1775218270&s=industrial&sprefix=aluminum%2Bl%2Bb%2Cindustrial%2C161&sr=1-13-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9tdGY&th=1) which gave me space to mount both boards on standoffs, but you can get by with [significantly smaller heat sinks](https://www.amazon.com/dp/B07B62V4FP?ref=nb_sb_ss_w_as-reorder_k5_1_9&amp=&crid=2OR320LZAT9D7&sprefix=heat%2Bsink&th=1). You will not be able to test the system at full power with the smaller heat sinks, but it will get plenty loud. 
 
@@ -124,7 +124,7 @@ Once a heat sink is drilled the LM1875 chips can be connected to it. Make sure t
 
 <br>
 <br>
-<p align="center"><strong>LM1875 Single Supply Inverting Amplifier (not BTL)</strong></p>
+<p align="center"><strong>LM1875 Single Supply Inverting Amplifier (not BTL):</strong></p>
 
 When building this system for the first time it helps to build a simple version of the power stage. The design below is an LM1875 inverting power stage I designed. The output capacitor is very important in this design, but it should be removed for BTL.
 <br>
