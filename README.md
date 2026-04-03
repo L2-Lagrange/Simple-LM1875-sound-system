@@ -1,5 +1,5 @@
 # Simple-LM1875-sound-system
-Below is my design for a simple, modular LM1875 bridge-tied-load (BTL) sound system. It is a practical analog amplifier system that is easy to build, has great performance, runs from a wide variety of DC power supplies, and makes for a great learning project. 
+Below is my design for a simple, modular LM1875 bridge-tied-load (BTL) sound system. It is a practical analog amplifier system that is easy to build, has great performance, runs from a wide variety of DC power supplies, and makes for a great project for learning analog system design. 
 
 <p align="center">
   <img src="Images/Amplifier_With_Speaker.jpg" width="300"><br>
